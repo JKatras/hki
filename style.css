@@ -358,6 +358,15 @@ footer {
 				border-color: #2A5662;
 				color: #000;
 			}
+			.home-top-form-input::-webkit-input-placeholder {
+				color: #fff;
+			}
+			.home-top-form-input::-moz-placeholder {  /* Firefox 19+ */
+		    color: #fff;  
+			}			
+			.home-top-form-input:-ms-input-placeholder {  
+  		  color: #fff;  
+			}
 			.home-top-form-button {
 				background: #c7a900;
 				color: #fff;
@@ -382,22 +391,6 @@ footer {
 				.home-top-form-input,
 				#home-free-week {
 					margin-bottom: 10px;
-				}
-				
-				.home-top-form-input::-webkit-input-placeholder {
-				   color: #fff;
-				}
-				
-				.home-top-form-input:-moz-placeholder { /* Firefox 18- */
-				   color: #fff;  
-				}
-				
-				.home-top-form-input::-moz-placeholder {  /* Firefox 19+ */
-				   color: #fff;  
-				}
-				
-				.home-top-form-input:-ms-input-placeholder {  
-				   color: #fff;  
 				}
 			}
 			@media only screen and (min-width: 768px) and (max-width: 1200px) {
@@ -497,11 +490,11 @@ footer {
 				.home-meal-planner-table-row {
 					margin-bottom: 20px;
 				}
-			}
 				.home-meal-planner-icon {
-					padding: 0 20px;
+					padding: 20px;
 					text-align: right;
 				}
+			}
 				@media only screen and (min-width: 0px) and (max-width: 768px) {
 					.home-meal-planner-icon {
 						text-align: center;
