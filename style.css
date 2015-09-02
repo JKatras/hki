@@ -745,9 +745,15 @@ footer {
 				margin: 0 0 20px 0;
 			}
 			@media only screen and (min-width: 0px) and (max-width: 768px) {
+				#home-story-copy {
+					padding: 20px;
+				}
 				#home-story-copy h3 {
 					font-size: 36px;
 					font-weight: 700;
+				}
+				#home-story-copy p {
+					font-size: 16px;
 				}
 			}
 			@media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -758,11 +764,6 @@ footer {
 			#home-story-copy p {
 				font-size: 20px;
 				margin-bottom: 40px;
-			}
-			@media only screen and (min-width: 0px) and (max-width: 768px) {
-				#home-story-copy p {
-					font-size: 16px;
-				}
 			}
 			@media only screen and (min-width: 768px) and (max-width: 1199px) {
 				#home-story-copy p {
