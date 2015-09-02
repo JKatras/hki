@@ -1316,6 +1316,14 @@ footer {
 /**
  * ABOUT PAGE
  */
+
+.about-img {
+	vertical-align: top;
+	padding: 20px;
+}
+.about-copy {
+	padding: 20px;
+}
 .member-photos-row {
 
 }
@@ -1331,8 +1339,14 @@ footer {
 		display: none!important;
 	}
 }
-@media only screen and (min-width: 750px) and (max-width: 969px) {
-
+@media only screen and (max-width: 790px) {
+	.about-img, .about-copy{
+		width: 100%;
+		display: block;
+	}
+	.about-img img {
+		margin: 0 auto;
+	}
 }
 .team-member-wrap {
 
@@ -1417,6 +1431,9 @@ a .team-member-name-mobile {
 	}
 	#member-arrow {
 		display: none;
+	}
+	.member-row{
+		padding: 0 20px;
 	}
 }
 

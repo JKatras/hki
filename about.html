@@ -1,0 +1,118 @@
+{embed="includes/.header"}
+
+<div class="page-row row">
+  <section class="page-content-wrap col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <h1 class="page-title">{structure:page:title}</h1>
+
+    {exp:channel:entries channel="pages" limit="1" dynamic="on"}
+      {content}
+    
+
+  </section>
+</div><!-- /.row -->
+
+<div id="home-testimonials-row" class="row">
+  <div id="home-testimonials" class="col-sm-12">
+    <div id="home-testimonials-slider">
+      <ul class="slides">
+        <li>
+          <div class="home-testimonial-wrap">
+            <img src="" alt="Person">
+            <blockquote>
+              {testimonial}
+                <p>{quote}</p>
+                <cite>&mdash; {cite} &mdash;</cite>
+              {/testimonial}
+            </blockquote>
+          </div><!-- /.home-testimonial-wrap -->
+        </li>               
+      </ul>
+    </div><!-- /#home-testimonials-slider -->
+  </div><!-- /.col-sm-12 -->
+</div><!-- /#home-testimonials-row -->
+   {/exp:channel:entries}
+
+<div class="page-row row member-photos-row">
+  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+    <h1 class="page-title">Meet Our Team</h1>
+    <div class="row">
+              <div class="team-member-wrap col-sm-3" data-member="1">
+          <a href="#" class="team-member-show" data-member-target="1">
+            <span class="team-member-photo-overlay team-member-photo-overlay-active"></span>
+            <img src="/assets/uploads/2014/11/mandy.jpg" class="team-member-photo">
+            <span class="team-member-name-mobile">Mandy Curry</span>
+          </a>
+          <div class="team-member-information" data-member-info="1">
+            <h3 class="team-member-information-name">Mandy Curry</h3>
+            <div class="team-member-information-bio">
+              <p>Mandy and Kirk Curry are the founders of Healthy Kids Inc. They are the parents to two young boys (7 and 9) who love to stay active. They built HKI on the premise of helping families “incorporate” work, kids, and healthy eating. Mandy knows busy all too well.  She spent 20 years in the corporate world building her career before devoting her days to Healthy Kids Inc. and their newly launched business Start A Garden.  She also sits on various boards throughout West Virginia, spearheads a state-wide outreach program called Healthy Kids, Healthy WV, and speaks with classrooms throughout the state about healthy eating.  She is also a blogger,  a contributor to <a href="http://www.ehow.com/contributor/mandy_mandy_curry/">eHow.com</a> and <a href="https://curious.com/healthykidsinc">Curious.com</a>, and produces a weekly YouTube series called <a href="https://www.youtube.com/healthykidsinc">Healthy Kids 4 Busy Families</a>.</p>
+            </div>
+            <div class="team-member-information-social">
+                            <a href="https://www.facebook.com/mandy.h.curry" class="team-member-fb" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook"></i></a>
+                                          <a href="https://twitter.com/mandycurry" class="team-member-tw" target="_blank"><span class="sr-only">Twitter</span><i class="fa fa-twitter"></i></a>
+                                        </div>
+          </div><!-- /.team-member-information -->
+        </div><!-- /.team-wrap -->
+                <div class="team-member-wrap col-sm-3" data-member="2">
+          <a href="#" class="team-member-show" data-member-target="2">
+            <span class="team-member-photo-overlay"></span>
+            <img src="/assets/uploads/2014/11/kirk2.jpg" class="team-member-photo">
+            <span class="team-member-name-mobile">Kirk Curry</span>
+          </a>
+          <div class="team-member-information" data-member-info="2">
+            <h3 class="team-member-information-name">Kirk Curry</h3>
+            <div class="team-member-information-bio">
+              <p>Kirk is co-founder of Healthy Kids Inc. He graduated from West Virginia University with an Environmental Consulting degree and then later spent 13 years in the Environmental Consulting field. In 2012, he was able to shift his career and devote his time exclusively to HKI as the videographer, photographer, and web developer. Kirk is the behind-the-scenes guru to the HKI site, which consists of over 350 videos. By day (and late night) he oversees the Healthy Kids Inc., site, but as soon as the kids get home from school, he is an amazing Dad, coach, and teacher of all-things-science to two boys that just can’t seem to get enough of him.</p>
+            </div>
+            <div class="team-member-information-social">
+                            <a href="https://www.facebook.com/kirk.curry1" class="team-member-fb" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook"></i></a>
+                                          <a href="https://twitter.com/kcwvueers" class="team-member-tw" target="_blank"><span class="sr-only">Twitter</span><i class="fa fa-twitter"></i></a>
+                                        </div>
+          </div><!-- /.team-member-information -->
+        </div><!-- /.team-wrap -->
+                <div class="team-member-wrap col-sm-3" data-member="3">
+          <a href="#" class="team-member-show" data-member-target="3">
+            <span class="team-member-photo-overlay"></span>
+            <img src="/assets/uploads/2014/11/joe1.jpg" class="team-member-photo">
+            <span class="team-member-name-mobile">Joe Crockett</span>
+          </a>
+          <div class="team-member-information" data-member-info="3">
+            <h3 class="team-member-information-name">Joe Crockett</h3>
+            <div class="team-member-information-bio">
+              <p>Joe committed himself to the culinary arts at an early age. Enrolling in culinary education while still in high school, he began to acquire the formal training needed to develop the talent for cooking, and was selected to compete in culinary competition at the world renowned hotel, The Greenbrier. After completing high school, the decision to further his culinary education led him to Mountwest, and his passion for cooking only grew deeper. In 2009, Joe worked alongside celebrity Chef Jamie Oliver on his Emmy award winning television series, “Jamie Oliver’s Food Revolution.” After the show wrapped, and at the young age of 21, Joe was given the position as chef at the kitchen Chef Oliver established in downtown Huntington, where he remained until 2011.  Joe now spends his time with Healthy Kids Inc., and as a chef for 21 at the Frederick.</p>
+            </div>
+            <div class="team-member-information-social">
+                            <a href="https://www.facebook.com/ChefJoeCrockett" class="team-member-fb" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook"></i></a>
+                                                      </div>
+          </div><!-- /.team-member-information -->
+        </div><!-- /.team-wrap -->
+                <div class="team-member-wrap col-sm-3" data-member="4">
+          <a href="#" class="team-member-show" data-member-target="4">
+            <span class="team-member-photo-overlay"></span>
+            <img src="/assets/uploads/2014/11/sarah1.jpg" class="team-member-photo">
+            <span class="team-member-name-mobile">Sarah Sturgill</span>
+          </a>
+          <div class="team-member-information" data-member-info="4">
+            <h3 class="team-member-information-name">Sarah Sturgill</h3>
+            <div class="team-member-information-bio">
+              <p>Sarah Sturgill is a Registered Dietitian who graduated from Marshall University with both her Bachelor’s and Master’s in Dietetics. She spent 3 years as a Families and Health Agent for the West Virginia University Extension Service. Sarah is also a certified specialist in child and adolescent weight management. She is a skilled instructor who has created and led the Community Weight Loss Program, a free weight management program in Putnam County, West Virginia. In her spare time, she is a competitive ultramarathon runner and a member of the WV Mountain Trail Runners and the WVU Obesity and Health Team.</p>
+            </div>
+            <div class="team-member-information-social">
+                                                        <a href="http://www.linkedin.com/pub/sarah-sturgill/32/a48/557" class="team-member-tw" target="_blank"><span class="sr-only">LinkedIn</span><i class="fa fa-linkedin"></i></a>
+                          </div>
+          </div><!-- /.team-member-information -->
+        </div><!-- /.team-wrap -->
+        <div class="clearfix"></div>  
+    </div><!-- /.row -->
+  </section>
+</div><!-- /.row -->
+<div class="member-row row">
+  <img src="/assets/img/arrow.png" id="member-arrow">
+  <div id="team-member-information-wrap" class="col-sm-8 col-sm-offset-2">
+
+  </div><!-- /#team-member-information-wrap -->
+</div><!-- /.row -->
+ <script type='text/javascript' src='/assets/js/team.js?ver=1.0.0'></script>
+
+       
+{embed="includes/.footer"}
