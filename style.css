@@ -699,8 +699,8 @@ footer {
 					}
 
 /**
- * HOME STORY
- */
+* HOME STORY
+*/
 #home-story-row {
 	background: #c7a900;
 	padding-bottom: 60px;
@@ -708,8 +708,9 @@ footer {
 }
 @media only screen and (min-width: 0px) and (max-width: 768px) {
 	#home-story-row {
-		padding-top: 0px;
-		padding-bottom: 20px;
+		/*padding-top: 0px;
+		padding-bottom: 20px;*/
+		padding: 20px;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -717,88 +718,78 @@ footer {
 		padding: 30px;
 	}
 }
-	#home-story {
-		color: #08262c;
+#home-story {
+	color: #08262c;
+}
+#home-story-video {
+	padding: 105px 20px 20px 0;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	#home-story-video {
+		padding: 0 0 20px 0;
 	}
-		#home-story-video {
-			padding: 105px 20px 20px 0;
-		}
-		@media only screen and (min-width: 0px) and (max-width: 768px) {
-			#home-story-video {
-				padding: 20px;
-			}
-		}
-		@media only screen and (min-width: 768px) and (max-width: 1199px) {
-			#home-story-video {
-				/*padding-top: 0;*/
-			}
-		}
-			#home-story-video iframe {
-				height: auto;
-				width: 100%;
-			}
-		#home-story-copy {
-
-		}
-			#home-story-copy h3 {
-				font-size: 70px;
-				margin: 0 0 20px 0;
-			}
-			@media only screen and (min-width: 0px) and (max-width: 768px) {
-				#home-story-copy {
-					padding: 20px;
-				}
-				#home-story-copy h3 {
-					font-size: 36px;
-					font-weight: 700;
-				}
-				#home-story-copy p {
-					font-size: 16px;
-				}
-			}
-			@media only screen and (min-width: 768px) and (max-width: 1199px) {
-				#home-story-copy h3 {
-					font-size: 50px;
-				}
-			}
-			#home-story-copy p {
-				font-size: 20px;
-				margin-bottom: 40px;
-			}
-			@media only screen and (min-width: 768px) and (max-width: 1199px) {
-				#home-story-copy p {
-					font-size: 16px;
-				}
-			}			
-			#home-story-btn {
-				background: #fff;
-				border: 6px solid #09262d;
-				border-radius: 5px;
-				color: #09262d;
-				font-family: 'Dosis', sans-serif;
-				font-size: 40px;
-				font-weight: 800;
-				padding: 10px 60px;
-				text-transform: uppercase;
-			}
-			@media only screen and (min-width: 0px) and (max-width: 768px) {
-				#home-story-btn {
-					display: block;
-					margin: 0 auto;
-					text-align: center;
-					width: 300px;
-				}
-			}
-			@media only screen and (min-width: 768px) and (max-width: 1199px) {
-				#home-story-btn {
-					font-size: 30px;
-				}
-			}
-			#home-story-btn:hover {
-				background: #09262d;
-				color: #fff;
-				text-decoration: none;
-			}
+}
+/*@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	#home-story-video {
+		/*padding-top: 0;*!/
+	}
+}*/
+#home-story-video iframe {
+	height: auto;
+	width: 100%;
+}
+#home-story-copy h3 {
+	font-size: 70px;
+	margin: 0 0 20px 0;
+}
+#home-story-copy p {
+	margin-bottom: 40px;
+	font-size: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	#home-story-copy h3 {
+		font-size: 36px;
+		font-weight: 700;
+	}
+	#home-story-copy p {
+		font-size: 16px;
+		padding: 0;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	#home-story-copy h3 {
+		font-size: 50px;
+	}
+}	
+#home-story-btn {
+	background: #fff;
+	border: 6px solid #09262d;
+	border-radius: 5px;
+	color: #09262d;
+	font-family: 'Dosis', sans-serif;
+	font-size: 40px;
+	font-weight: 800;
+	padding: 10px 60px;
+	text-transform: uppercase;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	#home-story-btn {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 300px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	#home-story-btn {
+		font-size: 30px;
+	}
+}
+#home-story-btn:hover {
+	background: #09262d;
+	color: #fff;
+	text-decoration: none;
+}
 
 /**
  * HOME TESTIMONIALS
@@ -1324,9 +1315,6 @@ footer {
 .about-copy {
 	padding: 20px;
 }
-.member-photos-row {
-
-}
 @media only screen and (min-width: 0px) and (max-width: 479px) {
 	.page-content-wrap img.team-member-photo,
 	.team-member-photo-overlay {
@@ -1338,11 +1326,17 @@ footer {
 	.team-member-photo-overlay {
 		display: none!important;
 	}
+	.member-photos-row h1.page-title{
+		padding-bottom: 20px;
+	}
 }
 @media only screen and (max-width: 790px) {
 	.about-img, .about-copy{
 		width: 100%;
 		display: block;
+	}
+	.about-copy {
+		padding: 0 20px;
 	}
 	.about-img img {
 		margin: 0 auto;
