@@ -894,18 +894,23 @@ footer {
 #home-blog-row {
 	padding-bottom: 40px;
 }
-	#home-blog {
-
+.home-blog-wrap {
+	padding: 0 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	.home-blog-wrap {
+		margin-bottom: 20px;
+		text-align: center;
 	}
-		.home-blog-wrap {
-			padding: 0 20px;
-		}
-		@media only screen and (min-width: 0px) and (max-width: 768px) {
-			.home-blog-wrap {
-				margin-bottom: 20px;
-				text-align: center;
-			}
-		}
+}
+@media only screen and (min-width: 0px) and (max-width: 1199px) {
+	.home-blog-title{
+		font-size: 24px;
+	}
+	.home-blog-read-more{
+		font-size: 18px;
+	}
+}
 			.home-blog-wrap img {
 				border-radius: 50%;
 				height: auto;
@@ -1886,7 +1891,7 @@ a .team-member-name-mobile {
 			color: #2A5662;
 			font-size: 50px;
 		}
-		@media only screen and (min-width: 0px) and (max-width: 767px) {
+		@media only screen and (min-width: 0px) and (max-width: 1199px) {
 			.blog-post-loop-content h3 a {
 				font-size: 30px;
 			}	
@@ -1895,7 +1900,7 @@ a .team-member-name-mobile {
 			color: #2A5662;
 			font-size: 18px;
 		}
-		@media only screen and (min-width: 0px) and (max-width: 767px) {
+		@media only screen and (min-width: 0px) and (max-width: 1199px) {
 			.blog-post-loop-content p {
 				font-size: 16px;
 			}	
@@ -1915,7 +1920,11 @@ a .team-member-name-mobile {
 			.blog-post-loop-more {
 				float: none;
 				text-align: center;
-				font-size: 20px;
+			}
+		}
+		@media only screen and (min-width: 0px) and (max-width: 1199px) {
+			.blog-post-loop-more {
+				font-size: 20px;	
 			}
 		}
 		.blog-post-loop-more:hover {
