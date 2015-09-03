@@ -1858,27 +1858,25 @@ a .team-member-name-mobile {
 .blog-post-row {
 	margin-bottom: 60px;
 }
+.blog-post-loop-img img {
+	border-radius: 50%;
+	height: auto;
+	opacity: .75;
+	transition: all ease .25s;
+	width: 100%;
+}
+.blog-post-loop-img img:hover {
+	opacity: 1;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
 	.blog-post-loop-img {
-
+		text-align: center;	
 	}
-		.blog-post-loop-img img {
-			border-radius: 50%;
-			height: auto;
-			opacity: .75;
-			transition: all ease .25s;
-			width: 100%;
-		}
-		.blog-post-loop-img img:hover {
-			opacity: 1;
-		}
-		@media only screen and (min-width: 0px) and (max-width: 767px) {
-			.blog-post-loop-img {
-				text-align: center;	
-			}
-			.blog-post-loop-img img {
-				max-width: 300px;
-			}
-		}
+	.blog-post-loop-img img {
+		max-width: 225px;
+		height: 225px;
+	}
+}
 	@media only screen and (min-width: 0px) and (max-width: 767px) {
 		.blog-post-loop-content {
 			text-align: center;
