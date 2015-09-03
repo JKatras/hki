@@ -904,8 +904,11 @@ footer {
 	}
 }
 @media only screen and (min-width: 0px) and (max-width: 1199px) {
-	.home-blog-title{
+	.home-blog-wrap h3{
 		font-size: 24px;
+	}
+	.home-blog-wrap p {
+		font-size: 16px;
 	}
 	.home-blog-read-more{
 		font-size: 18px;
