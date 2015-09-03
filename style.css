@@ -897,6 +897,10 @@ footer {
 .home-blog-wrap {
 	padding: 0 20px;
 }
+.home-blog-wrap p {
+	font-size: 20px;
+	font-weight: 100;
+}
 @media only screen and (min-width: 0px) and (max-width: 768px) {
 	.home-blog-wrap {
 		margin-bottom: 20px;
@@ -904,15 +908,15 @@ footer {
 	}
 }
 @media only screen and (min-width: 0px) and (max-width: 1199px) {
-	.home-blog-wrap h3{
+	/*.home-blog-wrap h3{
 		font-size: 24px;
-	}
+	}*/
 	.home-blog-wrap p {
 		font-size: 16px;
 	}
-	.home-blog-read-more{
+/*	.home-blog-read-more{
 		font-size: 18px;
-	}
+	}*/
 }
 			.home-blog-wrap img {
 				border-radius: 50%;
@@ -938,16 +942,16 @@ footer {
 				font-size: 35px;
 				font-weight: 300;
 			}
-			@media only screen and (min-width: 0px) and (max-width: 768px) {
+			@media only screen and (min-width: 0px) and (max-width: 1199px) {
 				.home-blog-wrap h3 {
 					font-size: 24px;
 				}
 			}
-			@media only screen and (min-width: 601px) and (max-width: 768px) {
+			/*@media only screen and (min-width: 601px) and (max-width: 768px) {
 				.home-blog-wrap h3 {
 					text-align: center;
 				}
-			}			
+			}			*/
 				.home-blog-wrap h3 a,
 				.home-blog-wrap h3 a:active,
 				.home-blog-wrap h3 a:visited,
@@ -959,18 +963,15 @@ footer {
 					color: #c7a900!important;
 					text-decoration: none;
 				}
-			.home-blog-wrap p {
-				font-size: 20px;
-				font-weight: 100;
-			}
-			@media only screen and (min-width: 0px) and (max-width: 768px) {
+			
+			/*@media only screen and (min-width: 0px) and (max-width: 768px) {
 				.home-blog-wrap p {
 					font-size: 16px;
 				}
-			}
+			}*/
 			@media only screen and (min-width: 601px) and (max-width: 768px) {
 				.home-blog-wrap p {
-					font-size: 18px;
+					/*font-size: 18px;*/
 					text-align: center;
 				}
 			}			
@@ -984,16 +985,20 @@ footer {
 			}
 			@media only screen and (min-width: 0px) and (max-width: 768px) {
 				.home-blog-read-more {
-					font-size: 16px;
 					text-align: center;
 				}
 			}
-			@media only screen and (min-width: 601px) and (max-width: 768px) {
+			@media only screen and (min-width: 0px) and (max-width: 1199px) {
 				.home-blog-read-more {
 					font-size: 18px;
+				}
+			}
+/*			@media only screen and (min-width: 601px) and (max-width: 768px) {
+				.home-blog-read-more {
+					/*font-size: 18px;*!/
 					text-align: center;
 				}
-			}			
+			}	*/		
 		#home-blog-more-wrap {
 			padding: 60px 0 40px 0;
 			text-align: center;
