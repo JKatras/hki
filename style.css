@@ -358,7 +358,6 @@ footer {
 			.home-top-form-input::-webkit-input-placeholder {
 				color: #fff;
 			}
-			/*not working in FF*/
 			.home-top-form-input::-moz-placeholder { 
 		    color: #fff;
 		    opacity: 1;  
