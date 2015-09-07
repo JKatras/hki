@@ -360,7 +360,8 @@ footer {
 			}
 			/*not working in FF*/
 			.home-top-form-input::-moz-placeholder { 
-		    color: #fff;  
+		    color: #fff;
+		    opacity: 1;  
 			}			
 			.home-top-form-input:-ms-input-placeholder {  
   		  color: #fff;  
