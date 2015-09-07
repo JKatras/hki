@@ -1,0 +1,15 @@
+{embed="includes/.header"}
+<div class="page-row row contact-form">
+  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+    <h1 class="page-title">{structure:page:title}</h1>
+    <article class="page-content-bg">
+    {exp:channel:entries channel="pages" limit="1" dynamic="on"}
+      {content}
+      <centerd>
+      {exp:forms:form form_name="contact_us"}
+      <centerd>
+    </article>
+  </section>
+</div><!-- /.row -->
+{/exp:channel:entries}   
+{embed="includes/.footer"}
