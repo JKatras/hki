@@ -2217,9 +2217,6 @@ input[type="submit"].ninja-forms-field:hover {
 		margin: 0;
 		padding: 0;
 	}
-	.comments ul.children {
-
-	}
 		.comments ul li.comment {
 			border-bottom: 1px dashed #BBBBBB;
 			border-top: 1px dashed #BBBBBB;
@@ -3697,42 +3694,40 @@ position: relative;
 	  font-size: 24px;
 	 left: 25px;
 	 width: 23px;
-}.drop_head #next8{
-	    position: absolute;
-		  top: 5px;
-		  font-size: 24px;
-		  right: 37px;
-		  width: 23px;
+}
+.drop_head #next8{
+  position: absolute;
+  top: 5px;
+  font-size: 24px;
+  right: 37px;
+  width: 23px;
 }
 .drop_head #prev8{
-	  position: absolute;
-	 top:5px;
-	  font-size: 24px;
-	 left: 25px;
-	 width: 23px;
-}.drop_head #next9{
-	    position: absolute;
-		  top: 5px;
-		  font-size: 24px;
-		  right: 37px;
-		  width: 23px;
+  position: absolute;
+  top:5px;
+  font-size: 24px;
+  left: 25px;
+  width: 23px;
+}
+.drop_head #next9{
+  position: absolute;
+  top: 5px;
+  font-size: 24px;
+  right: 37px;
+  width: 23px;
 }
 .drop_head #prev9{
-	  position: absolute;
-	 top:5px;
-	  font-size: 24px;
-	 left: 25px;
-	 width: 23px;
+  position: absolute;
+  top:5px;
+  font-size: 24px;
+  left: 25px;
+  width: 23px;
 }
-
-
 .week_hold p{
 	float: left;
 	width: 225px;
 	margin-left: 10px;
 }
-
-
 .week_hold img{
 	float: left;
 	border: 1px #09262D solid;
@@ -3750,7 +3745,6 @@ position: relative;
 #customWeek{
 	float: right;
 	width: 770px;
-
 }
 .customWeekTable{
 	border: 1px solid #dbdfe0;
@@ -3771,7 +3765,6 @@ position: relative;
 .customWeekTable tr:nth-child(even){
 	
 }
-
 .customWeekTable th{
 	width: 108.428px;
 	height: 30.428px;
@@ -3779,9 +3772,7 @@ position: relative;
 	border: 1px solid #dbdfe0;
 	background-color: #FFF0A8;
 }
-
 #memberBody{
-	
 	float: left;
 	width: 390px !important;
 }
@@ -3806,12 +3797,10 @@ position: relative;
 	float: right;
 	max-width: 50%;
 	margin-top: 24px;
-	
 }
 #directions{
 	float: left;
 	max-width: 50%;
-	
 }
 .vid_box{
 	float: left;
@@ -3853,25 +3842,21 @@ position: relative;
 	color: white;
 	float: right;
 	height: 25px;
-
 }
 #save:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .weekControls{
 	float: right;
 	width: 200px;
 	height: 30px;
-
 }
 #weekName{
-	
 	border: 0px;
 	font-size: 20px;
-
 }
 #weekName:focus{
 	border: 1px dashed #C7A900;
@@ -3917,21 +3902,17 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 .submitNote:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .noteInput{
 	border: none;
-	    height: 40px;
-    float: left;
-     word-wrap: break-word;
-    
-
+	height: 40px;
+  float: left;
+  word-wrap: break-word;
 }
-
 .noteInput:focus{
 	border: 1px dashed #C7A900;
-	
 }
 #customWeekCreator{
 	display: none;
@@ -3952,13 +3933,10 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 	text-decoration: none;
 }
 .normala:hover{
-	
 	text-decoration: underline;
-
 }
 #blogfeedWrap h3{
 	margin-top: -10px !important;
-
 }
 .blogFeedBlog{
 	float: left;
@@ -3967,17 +3945,13 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 	margin-bottom: 5px;
 }
 .blogFeedBlog img{
-
-	float: left;
-   
-    height: 160px;
+	float: left; 
+  height: 160px;
 }
 .blogFeedBlog p{
-
-	    float: right;
-    width: 200px;
-   
-    margin-top: 44px;
+  float: right;
+  width: 200px; 
+  margin-top: 44px;
 }
 #memberFavorites{
 	float: left;
@@ -3986,18 +3960,17 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 #customWeeks{
 	width: 790px;
-	
-    float: right;
-    margin-left: 20px;
-
+  float: right;
+  margin-left: 20px;
 }
 /*------------JK changes added from MC--------------*/
-.createdWeek{
+/*consolidated inside existing styles*/
+/*.createdWeek{
 	margin-bottom: 10px;
-}
-.controlsCalendar{
+}*/
+/*.controlsCalendar{
 	margin-top:10px;
-}
+}*/
  
 .deleteConfirm{
   display: none;
@@ -4028,12 +4001,11 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 .createdWeek{
 	width: 100%;
 	float: left;
+	margin-bottom: 10px;
 	text-align: center;
-
 }
 .createdWeek a{
 	color:#2A6496;
-
 }
 .createdWeek a:hover{
 	text-decoration: underline;
@@ -4051,31 +4023,26 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 	cursor: pointer;
 	font-weight: bold;
 	color: white;
-
 }
 .weekTitle:hover{
 	background-color: #09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 
 #register_member_form p input{
 	width: 300px;
-
 }
 #register_member_form p input:focus{
 	border: 1px dashed #C7A900;
-
 }
 #register_member_form p label{
 	width: 200px;
-
 }
 #reg{
 	border: 0px;
 	color: white;
-	
 	height: 30px;
 	background-color: #C7A900;
 
@@ -4083,14 +4050,14 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 #reg:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .search{
 	font-size: 30px;
 }
 .search:hover{
-color: white !important;
+	color: white !important;
 }
 .searchResultsBody hr{
 	width: 100%;
@@ -4113,58 +4080,57 @@ color: white !important;
 .searchResultsRow img{
 	margin-right: 50px;
 	border: 1px #09262D solid;
-
 }
 .searchResultsRow img:hover{
-
 	opacity: 0.75;
 }
 #keywords{
 	height: 32px;
-    width: 200px;
-    display: none;
-    font-size: 12px;
-    border: 0px;
-    padding-left: 5px;
+  width: 200px;
+  display: none;
+  font-size: 12px;
+  border: 0px;
+  padding-left: 5px;
 
 }
 .searchSubmit{
-	    width: 50px !important;
-    height: 32px;
-    border: 0px;
-    display: none;
-    color: white;
-    margin-left: -5px;
-    position: relative;
-    top: 2px;
-    border: 0px;
-    background-color: #C7A900;
+	width: 50px !important;
+  height: 32px;
+  border: 0px;
+  display: none;
+  color: white;
+  margin-left: -5px;
+  position: relative;
+  top: 2px;
+  border: 0px;
+  background-color: #C7A900;
  
 }
 .searchSubmit:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .closeSearch{
 	display: none;
-	 position: relative;
-    top: 2px;
-    left: 2px;
+	position: relative;
+  top: 2px;
+  left: 2px;
 }
 
 .searchli form{
-	    position: relative !important;
-    top: -5px !important;
+	position: relative !important;
+  top: -5px !important;
 }
 .controlsCalendar{
 	display: none;
+	margin-top:10px;
 	margin-bottom: 5px;
-    width: 790px;
-    height: 20px;
-    float: right
-        margin-top: 10px;
+  width: 790px;
+  height: 20px;
+  float: right;
+  margin-top: 10px;
 }
 .printCal{
 	display: none;
@@ -4176,70 +4142,60 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .step{
 	float:left;
-	    width: 164px;
+	width: 164px;
 }
 .stepDetail{
-
-	    float: left;
-       max-width: 730px;
-    margin-left: 20px;
-    margin-top: 26px;
+	float: left;
+  max-width: 730px;
+  margin-left: 20px;
+  margin-top: 26px;
 }
 .stepHold{
 	float: left;
 
 }
 .allStepHold{
-	    margin: auto;
-    width: 920px;
+	margin: auto;
+  width: 920px;
 }
 .stepHead{
-	   width: 475px;
+	width: 475px;
 	margin: auto;
 }
-
-
-
 .mealPlannerTop h3{
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    margin: auto;
-    display: block;
-    height: 56px;
-    width: 80%;
-    text-align: center;
-    margin-top: 35px;
-
-
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin: auto;
+  display: block;
+  height: 56px;
+  width: 80%;
+  text-align: center;
+  margin-top: 35px;
 }
 .mealPlannerTop{
-background-image: url(/assets/img/planner_bg.png);
-	
+	background-image: url(/assets/img/planner_bg.png);
 	background-repeat: no-repeat;
-   background-position: center;	
-color: rgb(9, 38, 45);
-display: block;
-font-family: Dosis, sans-serif;
-font-size: 22px;
-font-weight: 300;
-line-height: 35.2000007629395px;
-margin-bottom: 40px;
-margin-left: 0px;
-margin-right: 0px !important;
-margin-top: 50px;
-outline-color: rgb(9, 38, 45);
-outline-style: none;
-outline-width: 0px;
-text-align: center;
-
+  background-position: center;	
+	color: rgb(9, 38, 45);
+	display: block;
+	font-family: Dosis, sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 35.2000007629395px;
+	margin-bottom: 40px;
+	margin-left: 0px;
+	margin-right: 0px !important;
+	margin-top: 50px;
+	outline-color: rgb(9, 38, 45);
+	outline-style: none;
+	outline-width: 0px;
+	text-align: center;
 }
 #home-meal-planner h3 {
-    font-size: 30px;
-    font-weight: 100;
-    margin: 0 0 0px 0;
-    
-
+  font-size: 30px;
+  font-weight: 100;
+  margin: 0 0 0px 0;
 }
 .home-meal-planner-description{
 	color: rgb(8, 38, 44);
@@ -4279,8 +4235,8 @@ color:#2A6496 !important;
 .reg:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
--moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .faq-question .fa{
 	margin-right: 10px;
@@ -4295,7 +4251,12 @@ box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 }
 .deleteMeal{
 	position: absolute;
-    top: -15px;
-    left: -10px;
-    
+  top: -15px;
+  left: -10px;
 }
+/*------------JK change added from MC------------*/
+.findData .deleteMeal{
+	top: 24px;
+	left: -6px;
+}
+/*-----------------------------------------------*/
