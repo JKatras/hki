@@ -1,0 +1,26 @@
+<header id="header" class="col-sm-12">
+        <button id="header-menu-close-btn">
+        	<p id="header-menu-bars" class="fa fa-bars"></p> 
+        	<p id="header-menu-label">Menu</p>
+        </button>
+        <nav id="header-nav">
+            <div class="menu-header-menu-container">
+            	<ul id="menu-header-menu" class="menu">
+            		{exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="1|2|4|5"}
+            		{if logged_in}
+            		<li id="menu-item-3777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3777">
+						<a href="/members-home">Members Home</a>
+					</li>
+            		{/if}
+					{if logged_out}
+                    <li id="menu-item-3777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3777">
+                        <a href="/meal-planner">Meal Planner</a>
+                    </li>
+					<li id="menu-item-3777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3777">
+						<a href="/log-in">Login</a>
+					</li>
+					{/if}
+				</ul>
+			</div>                    
+        </nav><!-- /#header-nav -->
+    </header><!-- /#header -->  
