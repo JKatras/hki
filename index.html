@@ -133,33 +133,7 @@ wistiaEmbed = Wistia.embed("njikx86lg7", {
 
 
 	
-<div id="home-blog-row" class="row">
-  <section id="home-blog" class="col-sm-12">
-    <div id="home-blog-slider">
-      <ul class="slides">
-       {exp:channel:entries channel="blog" limit="15" dynamic="off" orderby="date" sort="decs"}
-       {if count == 1}
-       <li>
-          <div class="row">
-        {/if}
-            <div class="home-blog-wrap col-sm-4">
-              <img width="300" height="300" src="{blog_image}" class="attachment-loop-thumb wp-post-image" alt="{title}" />                  
-              <h3 class="home-blog-title">
-                  <a href="/templates/blog/{url_title}">{title}</a>
-              </h3>
-              <p>
-               {short_description}...
-              </p>
-              <a href="/templates/blog/{url_title}" title="Read More" class="home-blog-read-more">Read More</a>
-             </div><!-- /.home-blog-wrap -->
-          {if count < 15}
-          {switch='||</div></li><li><div class="row">'}
-          {/if}
-      {/exp:channel:entries}
-        
-      </ul>
-  </section><!-- /#home-blog -->
-</div><!-- /#home-blog-row -->
+
 
 {embed="includes/.footer"}
 <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=IN3O&webforms_id=238501"></script>
