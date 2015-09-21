@@ -341,9 +341,12 @@ footer {
 		width: 90%;
 	}
 }
-	#home-top-copy strong {
-		font-weight: 700;
-	}
+#home-top-copy strong {
+	font-weight: 700;
+}
+.hidden {
+	display: none;
+}
 #home-sign-up-row {
 	padding: 0 30px;
 }
