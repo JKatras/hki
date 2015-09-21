@@ -3,12 +3,9 @@ $(document).ready(function() {
 	var hsur = $('#home-sign-up-row');
 	var hfwb = $('#home-free-week-btn');
 	
-//	function toggleDisplay() {
-		hfwb.click({
-		 hfwb.toggleClass('hidden');
-		 hsur.toggleClass('hidden');
-		});
-//	}
-	
-//	toggleDisplay();
+	hfwb.click({
+	 hfwb.toggleClass('hidden');
+	 hsur.toggleClass('hidden');
+	});
+
 });
