@@ -362,7 +362,7 @@ footer {
 #home-sign-up-row .col-sm-6 {
 	text-align: center;
 }
-#home-sign-up-row button {
+#home-free-week-btn, #home-learn-more-btn {
 	font-family: 'Dosis', sans-serif;
 	/*padding: 15px 20px;*/
 	text-decoration: none;
@@ -372,9 +372,10 @@ footer {
 	border-radius: 5px;
 	font-size: 28px;
 }
-#home-sign-up-row button a {
+#home-learn-more-btn {
 	display: block;
 	padding: 15px 20px;
+	background-color: #809AA1;
 }
 @media only screen and (max-width: 768px) {
 	#home-sign-up-row button {
@@ -393,12 +394,12 @@ footer {
 		margin-bottom: 20px!important;
 	}
 }
-.home-free-week-btn {
+#home-free-week-btn {
 	background-color: #c7a900;
 }
-.home-learn-more-btn {
+/*#home-learn-more-btn {
 	background-color: #809AA1;
-}
+}*/
 .header-break {
 	display: block;
 }
