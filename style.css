@@ -364,9 +364,10 @@ footer {
 }
 #home-free-week-btn, #home-learn-more-btn {
 	font-family: 'Dosis', sans-serif;
-	/*padding: 15px 20px;*/
+	padding: 15px 20px;
 	text-decoration: none;
-	padding: 0;
+	text-align: center;
+	/*padding: 0;*/
 	width: 70%;
 	border: 0;
 	border-radius: 5px;
@@ -374,8 +375,12 @@ footer {
 }
 #home-learn-more-btn {
 	display: block;
-	padding: 15px 20px;
+	/*padding: 15px 20px;*/
 	background-color: #809AA1;
+}
+#home-learn-more-btn.hover {
+	color: white;
+	text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
 	#home-sign-up-row button {
