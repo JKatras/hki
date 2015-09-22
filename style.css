@@ -497,16 +497,19 @@ footer {
 	width: 100%;
 }
 #home-overview-menu {
-	max-width: 1000px;
+	padding: 0;
+	max-width: 1200px;
+	max-height: 125px;
 	margin: 0 auto;
 	list-style: none;
 }
 .home-overview-icon {
 	max-width: 250px;
 	text-align: center;
-}
-.home-overview-icon {
 	margin: 0 auto;
+}
+.home-overview-icon img {
+	max-height: 125px;
 }
 .home-overview-detail {
 	min-height: 400px;
@@ -516,7 +519,7 @@ footer {
 	
 }
 .home-overview-detail.active {
-	
+	display: block;
 }
 
 
