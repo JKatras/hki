@@ -492,16 +492,30 @@ footer {
 
 /*============================HOME OVERVIEW=================================*/
 
-.home-overview {
-	
+#home-overview {
+	min-height: 600px;
+	width: 100%;
+}
+#home-overview-menu {
+	max-width: 1000px;
+	margin: 0 auto;
+	list-style: none;
 }
 .home-overview-icon {
-	
+	max-width: 250px;
+	text-align: center;
+}
+.home-overview-icon {
+	margin: 0 auto;
 }
 .home-overview-detail {
+	min-height: 400px;
+	display: none;
+}
+.home-overview-icon.active {
 	
 }
-.home-overview-icon.active, .home-overview-detail.active {
+.home-overview-detail.active {
 	
 }
 
