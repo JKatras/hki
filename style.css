@@ -362,7 +362,7 @@ footer {
 #home-sign-up-row .col-sm-6 {
 	text-align: center;
 }
-#home-free-week-btn, #home-learn-more-btn {
+#home-free-week-btn, .home-learn-more-btn {
 	font-family: 'Dosis', sans-serif;
 	padding: 15px 20px;
 	text-decoration: none;
@@ -373,12 +373,12 @@ footer {
 	border-radius: 5px;
 	font-size: 28px;
 }
-#home-learn-more-btn {
+.home-learn-more-btn {
 	display: block;
 	/*padding: 15px 20px;*/
 	background-color: #809AA1;
 }
-#home-learn-more-btn.hover {
+.home-learn-more-btn.hover {
 	color: white;
 	text-decoration: none;
 }
@@ -1337,7 +1337,7 @@ footer {
 		background-position: center 100px;
 	}
 }		
-.page-content-wrap h1.page-title {
+h1.page-title {
 	font-size: 80px;
 	margin-bottom: 40px;
 	margin-top: 0;

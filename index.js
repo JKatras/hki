@@ -1,5 +1,5 @@
-$(document).ready(function() {
-//jQuery(function($) {
+//$(document).ready(function() {
+jQuery(function($) {
 	var hsup = $('#home-sign-up-prompt');
 	var hsur = $('#home-sign-up-row');
 	var hfwb = $('#home-free-week-btn');
@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 	hfwb.click(function(){
 	 console.log('FIRED');
-	 hfwb.toggleClass('hidden');
+	 hsup.toggleClass('hidden');
 	 hsur.toggleClass('hidden');
 	});
 
