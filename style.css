@@ -493,15 +493,15 @@ footer {
 /*============================HOME OVERVIEW=================================*/
 
 #home-overview {
-	min-height: 600px;
+	/*min-height: 600px;*/
 	width: 100%;
 }
-#home-overview-menu {
+.home-overview-div {
 	padding: 0;
 	max-width: 1200px;
-	max-height: 125px;
+	/*max-height: 125px;*/
 	margin: 0 auto;
-	list-style: none;
+	/*list-style: none;*/
 }
 .home-overview-icon {
 	max-width: 250px;
@@ -509,7 +509,7 @@ footer {
 	margin: 0 auto;
 }
 .home-overview-icon img {
-	max-height: 125px;
+	/*max-height: 125px;*/
 }
 .home-overview-detail {
 	min-height: 400px;
@@ -518,9 +518,9 @@ footer {
 .home-overview-icon.active {
 	
 }
-.home-overview-detail.active {
+/*.home-overview-detail.active {
 	display: block;
-}
+}*/
 
 
 
