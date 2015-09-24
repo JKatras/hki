@@ -362,6 +362,9 @@ footer {
 #home-sign-up-row .col-sm-6 {
 	text-align: center;
 }
+#home-sign-up-prompt div {
+	text-align: center;
+}
 #home-free-week-btn, .home-learn-more-btn {
 	font-family: 'Dosis', sans-serif;
 	padding: 15px 20px;
@@ -375,16 +378,17 @@ footer {
 }
 .home-learn-more-btn {
 	display: block;
+	margin: 0 auto;
 	/*padding: 15px 20px;*/
 	background-color: #809AA1;
 }
-.home-learn-more-btn.hover {
+a.home-learn-more-btn:hover {
 	color: white;
 	text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
-	#home-sign-up-row button {
-		
+	#home-free-week-btn {
+		margin-bottom: 20px;
 	}
 }
 #home-free-week {
@@ -495,32 +499,34 @@ footer {
 #home-overview {
 	/*min-height: 600px;*/
 	width: 100%;
+	margin-top: 40px;
 }
 .home-overview-div {
-	padding: 0;
+	padding-bottom: 40px;
 	max-width: 1200px;
-	/*max-height: 125px;*/
+	min-height: 400px;
 	margin: 0 auto;
 	/*list-style: none;*/
 }
-.home-overview-icon {
-	max-width: 250px;
+.home-overview-div ul {
+	list-style: none;
+}
+/*.home-overview-icon {
+	max-height: 150px;
+	max-width: 150px;
 	text-align: center;
 	margin: 0 auto;
-}
+}*/
 .home-overview-icon img {
-	/*max-height: 125px;*/
+	max-height: 100px;
+	max-width: 100px;
 }
 .home-overview-detail {
-	min-height: 400px;
-	display: none;
+	vertical-align: middle;
 }
 .home-overview-icon.active {
 	
 }
-/*.home-overview-detail.active {
-	display: block;
-}*/
 
 
 
@@ -1383,12 +1389,12 @@ h1.page-title {
 	text-align: center;
 }
 @media only screen and (min-width: 768px) and (max-width: 971px) {
-	.page-content-wrap h1.page-title {
+	h1.page-title {
 		font-size: 60px;
 	}
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-	.page-content-wrap h1.page-title {
+	h1.page-title {
 		font-size: 40px;
 	}
 }

@@ -4,10 +4,6 @@ jQuery(function($) {
 	var hsur = $('#home-sign-up-row');
 	var hfwb = $('#home-free-week-btn');
 	
-	console.log(hsup);
-	console.log(hsur);
-	console.log(hfwb);
-	
 	hfwb.click(function(){
 	 console.log('FIRED');
 	 hsup.toggleClass('hidden');
