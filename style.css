@@ -93,7 +93,8 @@ body {
 	#header.active {
 		background: rgba(199,169,0,.95);
 	}
-}	
+}
+
 #header-menu-close-btn {
 	background: transparent;
 	border: 0;
@@ -115,29 +116,34 @@ body {
 	width: auto;
 	z-index: 9999;
 }
-#header-menu-label{
+@media only screen and (min-width: 767px) {
+	#header-menu-close-btn {
+		display: none;
+	}
+}
+/*#header-menu-label{
 	display: block;
 	margin: 0;
-}
-#header-menu-bars {
+}*/
+/*#header-menu-bars {
 	display: none;
 	margin: 0;
-}
+}*/
 @media only screen and (min-width: 0px) and (max-width: 600px) {
 	#header-menu-close-btn {
-		float: none;
+		/*float: none;*/
 		/*margin: 0 auto;*/
 		/*width: auto;*/
 	}
 }
-@media only screen and (max-width: 970px){
+/*@media only screen and (max-width: 970px){
 	#header-menu-label {
 		display: none;
 	}
 	#header-menu-bars {
 		display: block;
 	}
-}
+}*/
 #header-menu-close-btn.scrolling {
 	background: #000;
 	background: rgba(0,0,0,.75);
@@ -353,6 +359,18 @@ footer {
 }
 #home-sign-up-row {
 	padding: 0 30px;
+	-moz-transition: all ease .25s;
+    -ms-transition: all ease .25s;
+    -o-transition: all ease .25s;
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+}
+#home-sign-up-prompt {
+	-moz-transition: all ease .25s;
+    -ms-transition: all ease .25s;
+    -o-transition: all ease .25s;
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
 }
 @media only screen and (max-width: 659px) {
 	#home-sign-up-row {
@@ -4377,26 +4395,30 @@ color:#2A6496 !important;
 /**********************/
 /**** Styles Marc added since 8/26 
 */
-#headNav{
-	   width: 582px;
-    list-style-type: none;
-    height: 33px;
 
+/*.header-menu-wrap {
+	float: right;
+}*/
+
+#headNav{
+	width: 582px;
+  list-style-type: none;
+  height: 33px;
+	/*text-align: right;*/
 }
 #headNav li{
+	/*display: inline;*/
 	float: left;
-    min-width: 28px;
-    margin-right: 15px;
-    height: 25px;
-    text-decoration: none;
-    cursor: pointer;
+  min-width: 28px;
+  margin-right: 15px;
+  height: 25px;
+  text-decoration: none;
+  cursor: pointer;
 }
 #headNav li:hover{
-	
-	border-bottom: 3px solid #c7a900;
+	/*border-bottom: 3px solid #c7a900;*/
 	text-decoration: none;
 	color: #c7a900 !important;
-
 }
 #headNav a{
 	text-decoration: none;
