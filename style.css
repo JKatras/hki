@@ -254,6 +254,7 @@ footer {
 	color: #fff;
 	min-height: 798px;
 	position: relative;
+	margin-bottom: 80px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
@@ -272,6 +273,7 @@ footer {
 	#home-top-row {
 		min-height: auto;
 		padding-bottom: 40px;
+		margin-bottom: 40px;
 	}
 }
 #home-top-video-wrap {
@@ -354,23 +356,30 @@ footer {
 #home-top-copy strong {
 	font-weight: 700;
 }
-.hidden {
-	display: none;
-}
-#home-sign-up-row {
-	padding: 0 30px;
+/*.hidden {
+	opacity: 0;
 	-moz-transition: all ease .25s;
     -ms-transition: all ease .25s;
     -o-transition: all ease .25s;
     -webkit-transition: all ease .25s;
     transition: all ease .25s;
+    display: none;
+}*/
+#home-sign-up-row {
+	display: none;
+	padding: 0 30px;
+	/*-moz-transition: all ease .25s;
+    -ms-transition: all ease .25s;
+    -o-transition: all ease .25s;
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;*/
 }
 #home-sign-up-prompt {
-	-moz-transition: all ease .25s;
+	/*-moz-transition: all ease .25s;
     -ms-transition: all ease .25s;
     -o-transition: all ease .25s;
     -webkit-transition: all ease .25s;
-    transition: all ease .25s;
+    transition: all ease .25s;*/
 }
 @media only screen and (max-width: 659px) {
 	#home-sign-up-row {

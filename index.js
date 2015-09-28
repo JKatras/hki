@@ -4,10 +4,15 @@ jQuery(function($) {
 	var hsur = $('#home-sign-up-row');
 	var hfwb = $('#home-free-week-btn');
 	
-	hfwb.click(function(){
-	 console.log('FIRED');
-	 hsup.toggleClass('hidden');
-	 hsur.toggleClass('hidden');
+//	hfwb.click(function(){
+//	 hsup.toggleClass('hidden');
+//	 hsur.toggleClass('hidden');
+//	});
+	hfwb.click(function() {
+	 hsup.fadeOut(500, function() {
+	 	hsur.fadeIn(500);
+	 });
+	 return false;
 	});
-
+	
 });
