@@ -2462,22 +2462,24 @@ input[type="submit"].ninja-forms-field:hover {
    width: 100% !important;
    height: 100% !important;
 }
-	
-
-
 
 .ptab {
-    background: none repeat scroll 0 0 #ffffff;
-    border: 1px solid #e8e8e8;
-    border-radius: 5px;
-    display:inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    max-width: 350px;
+  background: none repeat scroll 0 0 #ffffff;
+  /*border: 1px solid #e8e8e8;
+  border-radius: 5px;*/
+  display:inline-block;
+ /* margin-left: 20px;
+  margin-right: 20px;*/
+  padding: 10px;
+  max-width: 350px;
 	margin-bottom:80px;
 }
 
+.ptab-col-wrap {
+	padding: 0 20px;
+	border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
 
 .rtab {
     margin-top: -32px;
