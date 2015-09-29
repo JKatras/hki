@@ -406,6 +406,11 @@ footer {
 	border: 0;
 	border-radius: 5px;
 	font-size: 28px;
+	-moz-transition: all ease .25s;
+  -ms-transition: all ease .25s;
+  -o-transition: all ease .25s;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
 }
 .home-learn-more-btn {
 	display: block;
@@ -436,6 +441,14 @@ a.home-learn-more-btn:hover {
 }
 #home-free-week-btn {
 	background-color: #c7a900;
+}
+#home-free-week-btn:hover {
+	background-color: #09262d;
+	/*background-color: #2A5662;*/
+}
+.home-learn-more-btn:hover {
+	background-color: #2A5662;
+	/*background-color: #09262d;*/
 }
 /*#home-learn-more-btn {
 	background-color: #809AA1;
@@ -554,6 +567,9 @@ a.home-learn-more-btn:hover {
 }
 .home-overview-detail {
 	vertical-align: middle;
+}
+.home-overview-img {
+	text-align: center;
 }
 .home-overview-icon.active {
 	
@@ -2499,8 +2515,8 @@ input[type="submit"].ninja-forms-field:hover {
     color: #fff;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 13px;
-    padding: 6px;
+    /*margin-bottom: 13px;*/
+    /*padding: 6px;*/
     text-align: center;
 }
 
@@ -2520,9 +2536,8 @@ input[type="submit"].ninja-forms-field:hover {
     text-align: center;
 }
 
-
 .pprice {
-    background: none repeat scroll 0 0 #09262d;
+    /*background: none repeat scroll 0 0 #09262d;*/
     border-radius: 8px;
     color: #fff;
     font-size: 41px;
@@ -2532,7 +2547,18 @@ input[type="submit"].ninja-forms-field:hover {
     text-align: center;
     width: 115px;
 }
-
+.one-week {
+	background-color: #09262d;
+}
+.three-month {
+	background-color: #2b5661;
+}
+.six-month {
+	background-color: #809aa1;
+}
+.one-year {
+	background-color: #c6a82e;
+}
 .joi {
     font-weight: 700;
     padding-bottom: 4px;
@@ -2557,13 +2583,13 @@ input[type="submit"].ninja-forms-field:hover {
 	
 a.join {
     background: none repeat scroll 0 0 #fff;
-    border: 6px solid #09262d;
+    border: 3px solid #09262d;
     border-radius: 5px;
     color: #09262d;
     display: inline-block;
     font-family: "Dosis",sans-serif;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 7px;
     padding: 4px 30px;
     text-transform: uppercase;
@@ -2575,11 +2601,12 @@ a.join:hover {
     text-decoration: none;
 }
 
-	
-	
 .pricebox {
     margin: 140px auto 50px;
     max-width: 1200px;
+}
+.rtab .ptab-col-wrap {
+	border-radius: 0 0 5px 5px;
 }
 
 /*Styles i have added*/
@@ -4362,6 +4389,7 @@ position: relative;
 	width: 66%;
     margin: auto;
     text-align: center;
+    min-height: 26px;
 }
 .tagline{
 	margin-bottom: 30px !important;
