@@ -1,4 +1,6 @@
 function init() {
+	console.log('oi m8');
+	
 	window.addEventListener('scroll', function(e) {
 		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
 			shrinkOn = 300,
