@@ -15,17 +15,22 @@ $(document).ready(function() {
 	
 //homepage animate GIFs on scroll
 
-//	var gifLoadPos = $('#snoopy-gif').offset().top;
-//	$('html, body').scroll(function() {
-//			console.log('gif position= '+gifLoadPos);
-//			console.log("$(document).scrollTop()= "+$(document).scrollTop());
-//	});
-	
-	var waypoint = new Waypoint({
-		element: document.getElementById('snoopy-gif'),
-	  handler: function(direction) {
-	    console.log('Scrolled to waypoint!')
-	  }
-	});
+	var gifLoadPos = $('#snoopy-gif').offset().top;
+	var notLoaded = true;
+  $(document).scroll(function(){
+      var scrollPosition = $(this).scrollTop();
+      console.log(scrollPosition, 'doc pos');
+      console.log(gifLoadPos, 'gif pos');
+      
+      if(gifLoadPos - scrollPosition <= 300 && notLoaded)
+      {
+      	$('#snoopy-gif').attr('src', '/assets/img/placeholder/snoopy.gif');
+      	$('#fall-leaves-gif').attr('src', '/assets/img/placeholder/fall_leaves.gif');
+      	$('#corgi-gif').attr('src', '/assets/img/placeholder/corgi_leaves.gif');
+      	$('#stream-gif').attr('src', '/assets/img/placeholder/stream.gif');
+      	notLoaded = false;
+      }
+  });
+ 
 	
 });

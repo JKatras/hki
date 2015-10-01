@@ -1,0 +1,10 @@
+.home-overview-div {
+	min-height: auto;
+}
+.home-overview-div.row {
+	margin-bottom: 80px;
+	padding: 0;
+}
+.home-overview-img img {
+	max-width: 500px;
+}

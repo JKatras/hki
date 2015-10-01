@@ -5,7 +5,6 @@
 	    <main id="main-content" class="col-sm-12">
 	        <nav id="login-social-nav">
 	            <ul>
-	                <li>{if logged_out}<a href="/log-in" title="Login" id="header-login">Login</a>{/if}{if logged_in}<a href="{path='logout'}" id="header-login">Log Out</a>{/if}</li>
 	                <li><a href="https://www.facebook.com/HealthyKidsInc" title="Facebook" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook"></i></a></li>
 	                <li><a href="http://www.youtube.com/user/HealthyKidsInc" title="YouTube" target="_blank"><span class="sr-only">YouTube</span><i class="fa fa-youtube"></i></a></li>
 	                <li><a href="http://www.pinterest.com/healthykidsinc/" title="Pinterest" target="_blank"><span class="sr-only">Pinterest</span><i class="fa fa-pinterest"></i></a></li>
@@ -48,6 +47,9 @@
 	        </div>  
 					<input type="hidden" name="webform_id" value="7446501"/>
 				</form>
+				<!--<div class="col-sm-6">
+					<a href="/meal-planner" class="home-learn-more-btn">SEE HOW IT WORKS</a>
+				</div>-->
       </div><!-- #home-sign-up-row -->
   </section><!-- /#home-top -->
 </div><!-- /#home-top-row -->
@@ -67,8 +69,8 @@
 					<p>Etsy photo booth locavore keffiyeh. Bitters biodiesel sriracha semiotics keytar pop-up. Sriracha shabby chic PBR Kickstarter, meggings scenester wolf deep v iPhone migas try-hard tilde fashion axe Pinterest roof party.</p>
 				</li>
 			</ul>
-			<div id="snoopy-gif" class="home-overview-img col-sm-6">
-				<img src="/assets/img/placeholder/snoopy-still.jpg" alt="" />
+			<div class="home-overview-img col-sm-6">
+				<img src="/assets/img/placeholder/snoopy-still.jpg" alt="" id="snoopy-gif" />
 			</div>
 		</div>
 		<div class="home-overview-div row">
@@ -283,4 +285,4 @@ wistiaEmbed = Wistia.embed("njikx86lg7", {
 
 
 {embed="includes/.footer"}
-<script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=IN3O&webforms_id=238501"></script>
+<!-- <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=IN3O&webforms_id=238501"></script> -->
