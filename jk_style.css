@@ -1,10 +1,33 @@
-.home-overview-div {
-	min-height: auto;
+/*html, body {
+	height: 100%;
+	min-height: 100%;
+	overflow-x: visible;
+}*/
+.container-fluid {
+	overflow-x: hidden;
 }
-.home-overview-div.row {
-	margin-bottom: 80px;
-	padding: 0;
-}
-.home-overview-img img {
-	max-width: 500px;
-}
+	.home-overview-div {
+		min-height: auto;
+	}
+	.home-overview-div.row {
+		margin-bottom: 80px;
+		padding: 0;
+	}
+	.home-overview-img img {
+		max-width: 500px;
+	}
+	/*
+	*****still being overridden by bootstrap****
+	*/
+/*	body.home > div.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	body.home > div.container-fluid > .row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#page-top-row {
+		margin-left: 0;
+		margin-right: 0;
+	}*/
