@@ -6,28 +6,58 @@
 .container-fluid {
 	overflow-x: hidden;
 }
-	.home-overview-div {
-		min-height: auto;
+.home-overview-div {
+	min-height: auto;
+}
+.home-overview-div.row {
+	margin-bottom: 80px;
+	padding: 0;
+}
+.home-overview-img img {
+	max-width: 500px;
+}
+#page-logo {
+	display: none;
+}
+div#page-top-row.smaller {
+	background-image: none;
+	background-color: #2b5661;
+}
+#page-top-row.smaller #login-social-nav{
+	top: 0;
+}
+@media only screen and (min-width: 0) {
+/*this doesn't work, always has white underline
+but also won't be hovering on mobile...*/
+	a.team-member-name-mobile:hover {
+		text-decoration: none;
 	}
-	.home-overview-div.row {
-		margin-bottom: 80px;
-		padding: 0;
-	}
-	.home-overview-img img {
-		max-width: 500px;
-	}
-	/*
-	*****still being overridden by bootstrap****
-	*/
-/*	body.home > div.container-fluid {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	body.home > div.container-fluid > .row {
-		margin-left: 0;
-		margin-right: 0;
-	}
+}
+@media only screen and (max-width: 767px) {
 	#page-top-row {
-		margin-left: 0;
-		margin-right: 0;
-	}*/
+		height: 60px;
+	}
+	#page-top-row.smaller {
+		height: 40px;
+	}
+	#page-logo {
+		display: inline-block;
+		text-align: left;
+		height: auto;
+		margin-left: 20px;
+	}
+	#page-logo a {
+		display: block;
+		height: auto;
+	}
+	#login-social-nav {
+		display: none;
+	}
+	ul#headNav {
+		display: none;
+	}
+	div.mobileNav {
+		display: inline-block;
+	}
+}
+
