@@ -1,9 +1,90 @@
 <header id="header" class="col-sm-12">
+{if logged_in}
+    <style>
+    #headNav{
+        width: 582px;
+      list-style-type: none;
+      height: 33px;
+      margin-left: 89px;
+      }
+    #headNav li{
+        /*display: inline;*/
+        float: left;
+      min-width: 28px;
+      margin-right: 15px;
+      height: 25px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #headNav li:hover{
+        /*border-bottom: 3px solid #c7a900;*/
+        text-decoration: none;
+        color: #c7a900 !important;
+    }
+    #headNav a{
+        text-decoration: none;
+         height: 25px;
+    }
+    #headNav a:hover{
+     color: #c7a900 !important;
+    }
+    #headNav .here{
+        border-bottom: 3px solid #c7a900;
+        text-decoration: none;
+        color: #c7a900 !important;
+    }
+    </style>
+{if:else}
+    <style>
+    #headNav{
+        width: 582px;
+      list-style-type: none;
+      height: 33px;
+      margin-left: 121px;
+      }
+    #headNav li{
+        /*display: inline;*/
+        float: left;
+      min-width: 28px;
+      margin-right: 15px;
+      height: 25px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #headNav li:hover{
+        /*border-bottom: 3px solid #c7a900;*/
+        text-decoration: none;
+        color: #c7a900 !important;
+    }
+    #headNav a{
+        text-decoration: none;
+         height: 25px;
+    }
+    #headNav a:hover{
+     color: #c7a900 !important;
+    }
+    #headNav .here{
+        border-bottom: 3px solid #c7a900;
+        text-decoration: none;
+        color: #c7a900 !important;
+    }
+    </style>
+{/if}
  <!--        <nav id="header-nav">
             <div class="menu-header-menu-container"> -->
-
-            	<ul id="headNav">
-                        {if logged_out}
+<!--       ***********
+    	   JK attempt 9/28    
+		   ********** 
+ 			<div class="header-menu-wrap">
+			<button id="header-menu-close-btn">
+        		<p id="header-menu-bars" class="fa fa-bars"></p> 
+       		</button> -->
+            <div class="mobileNav" style="display:none;">
+                <button id="header-menu-close-btn">
+                    <p id="header-menu-bars" class="fa fa-bars"></p> 
+                </button>
+                {if logged_out}
+                    <ul>
                         <li>
                             <a href="/log-in" title="Login" id="header-login">Login</a>
                         </li>
@@ -11,24 +92,46 @@
                          <li>
                             <a href="/meal-planner">Meal Planner</a>
                         </li>
-                        {/if}
-                        {if logged_in}
-                        <li id="welcomeUser">
-                            <img src="/assets/img/HKI-hat.png" alt="HKI-Hat" id="loggedHat"/>
-                            <a href="">Welcome, {screen_name}</a>
-                            <ul id="memberOptions">
-                                <li><a href="{path='logout'}">Log Out</a></li>
-                            </ul>
-                            <!-- <a href="{path='logout'}" id="header-login">Log Out</a> -->
-                        </li>
+                    </ul>
+                {/if}
+                {if logged_in}
+                    <ul>
+                        <li><a href="{path='logout'}">Log Out</a></li>
                         <li>
                             <a href="/members-home">Members Home</a>
                         </li>
                         {exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="2|4|5"}
-                    
+                    </ul>
+                {/if}
+            </div>
+
+
+            	<ul id="headNav">
+                        {if logged_out}
+                            <li>
+                                <a href="/log-in" title="Login" id="header-login">Login</a>
+                            </li>
+                            <li>
+                                <a href="/meal-planner">Meal Planner</a>
+                            </li>
+                            {exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="1|2|4|5"}
                         {/if}
-				
+                        {if logged_in}
+                            <li id="welcomeUser">
+                                <img src="/assets/img/HKI-hat.png" alt="HKI-Hat" id="loggedHat"/>
+                                <a href="">Welcome, {screen_name}</a>
+                                <ul id="memberOptions">
+                                    <li><a href="{path='logout'}">Log Out</a></li>
+                                </ul>
+                                <!-- <a href="{path='logout'}" id="header-login">Log Out</a> -->
+                            </li>
+                            <li>
+                                <a href="/members-home">Members Home</a>
+                            </li>
+                            {exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="2|4|5"}
+                        {/if}
 				</ul>
+          <!--    </div> /.header-menu-wrap -->
 			<!-- </div>                    
         </nav><!-- /#header-nav -->
     </header><!-- /#header -->  

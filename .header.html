@@ -46,7 +46,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script type="text-javascript" src="/assets/js/index.js"></script>
 <!-- JQUERY -->
 <!-- plugins -->
 <script type='text/javascript' src='/assets/js/vendor/flexslider/jquery.flexslider-min.js?ver=2.6.2'></script>
@@ -62,19 +61,19 @@
 
 <div class="container-fluid">        
         <div class="row">            
-            <main id="main-content" class="col-sm-12">
+            <main id="main-content">
                 
                 
   
       {if segment_2=="blog"}
-      <div id="page-top-row" class="row" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
+      <div id="page-top-row" class="col-xs-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
       {if:elseif segment_2=="week"}
-      <div id="page-top-row" class="row" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
+      <div id="page-top-row" class="col-xs-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
       {if:elseif segment_2=="meal2"}
-      <div id="page-top-row" class="row" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
+      <div id="page-top-row" class="col-xs-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
       {if:else}
       {exp:channel:entries channel="pages" limit="1" dynamic="on"}
-      <div id="page-top-row" class="row" style="background-image:url({header_image});">
+      <div id="page-top-row" class="col-xs-12" style="background-image:url({header_image});">
       {/exp:channel:entries}
       {/if}                   
       <nav id="login-social-nav">
