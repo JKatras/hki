@@ -8,9 +8,9 @@ Version: 1.0
 */
 
 html, body {
-/*	height: 100%;
-	min-height: 100%;
-	overflow-x: visible;*/
+	/*height: 100%;*/
+	/*min-height: 100%;*/
+	/*overflow-x: visible;*/
 	/*overflow-y: scroll;  has to be scroll, not auto */
 	/*-webkit-overflow-scrolling: touch; */	
 }
@@ -18,7 +18,9 @@ html, body {
 body {
 	font-family: "proxima-nova", sans-serif !important;
 }
-
+div.container-fluid{
+	overflow-x:hidden;
+}
 /**
  * BUTTON
  */
