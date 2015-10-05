@@ -86,6 +86,23 @@ div#page-top-row.smaller {
 	-webkit-transition: all ease .5s;		
 	transition: all ease .5s;		
 }
+/*
+*****members header
+*/
+
+.mwelcome {
+	z-index: 20;
+}
+#page-top-row-mem, #page-top-row-mem #login-social-nav, #page-top-row-mem #header, .mwelcome {
+	position: absolute;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(128,128,128,1);
+  box-shadow: 0px 2px 2px 0px rgba(128,128,128,1);
+}
 @media only screen and (min-width: 0) {
 /*this doesn't work, always has white underline
 but also won't be hovering on mobile...*/
