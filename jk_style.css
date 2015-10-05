@@ -1,10 +1,16 @@
-/*html, body {
-	height: 100%;
-	min-height: 100%;
-	overflow-x: visible;
-}*/
+
 .container-fluid {
 	overflow-x: hidden;
+}
+#header.home-header {
+	position: absolute;
+}
+#login-social-nav.home-social-nav {
+	position: absolute;
+}
+#login-social-nav.home-social-nav.fixed, #header.home-header.fixed {
+	position: fixed;
+	top: 10px;
 }
 .home-overview-div {
 	min-height: auto;
@@ -93,6 +99,9 @@ div#page-top-row.smaller {
 .mwelcome {
 	z-index: 20;
 }
+#page-top-row-mem {
+	text-align: center;
+}
 #page-top-row-mem, #page-top-row-mem #login-social-nav, #page-top-row-mem #header, .mwelcome {
 	position: absolute;
 }
@@ -139,6 +148,9 @@ but also won't be hovering on mobile...*/
 	#page-top-row {
 		height: 60px;
 		padding: 0;
+		text-align: left;
+	}
+	#page-top-row-mem {
 		text-align: left;
 	}
 	#page-top-row.smaller {
