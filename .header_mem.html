@@ -1,3 +1,14 @@
+{if logged_out}
+  {redirect="/log-in"}
+{/if}
+{if member_group == '5'}
+  {redirect="/join"}
+{/if}
+{if member_group == '4'}
+  {redirect="/join"}
+{/if}
+ 
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,22 +18,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>{exp:structure:titletrail sperator=" | " site_name="yes"}</title>
+
+    <!--script src="http//use.typekit.net/vfg5ggc.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script-->
     {exp:seo_lite use_last_segment='yes'
     title_postfix='{embed:title_postfix}'
     default_title='{embed:default_title}'
     default_keywords='{embed:default_keywords}'
     default_description='{embed:default_description}'
     }
-      
-    <meta property="og:title" content="Healthy Kids Inc." />
-    <meta property="og:type" content="product" />
-    <meta property="og:url" content="https://healthykidsinc.com" />
-    <meta property="og:image" content="https://healthykidsinc.com/assets/img/HD-HKI-logo-blue-and-gold.png" />
-    
-    <title>{exp:structure:titletrail sperator=" | " site_name="yes"}</title>
-
-    <!--script src="http//use.typekit.net/vfg5ggc.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script-->
 
     <link href='https://fonts.googleapis.com/css?family=Dosis:200,400,300,700,800' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/assets/img/favicon.png">
@@ -53,11 +59,11 @@
 <script type='text/javascript' src='/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js?ver=2.6.2'></script>
 <link rel='shortlink' href='https://healthykidsinc.com/' />
 <!-- plugins -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><!-- font awesome -->
 </head>
 <style>
 {embed="assets/style"}
 </style>
-<!-- Start JK Style -->
 <style>
 {embed="assets/jk_style"}
 </style>
@@ -66,39 +72,63 @@
 <div class="container-fluid">        
         <div class="row">            
             <main id="main-content">
-                
-                
-  
+               
       {if segment_2=="blog"}
-      <div id="page-top-row" class="col-xs-12">
+      <div id="page-top-row-mem" class="col-sm-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
       {if:elseif segment_2=="week"}
-      <div id="page-top-row" class="col-xs-12">
-      {if:elseif segment_2=="meal2"}
-      <div id="page-top-row" class="col-xs-12">
+      <div id="page-top-row-mem" class="col-sm-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
+      {if:elseif segment_2=="meal"}
+      <div id="page-top-row-mem" class="col-sm-12" style="background-image:url(/assets/img/page_top_bg_lg.jpg);">
       {if:else}
       {exp:channel:entries channel="pages" limit="1" dynamic="on"}
-      <div id="page-top-row" class="col-xs-12" style="background-image:url({header_image});">
+      <div id="page-top-row-mem" class="col-sm-12" style="background-image:url({header_image});">
       {/exp:channel:entries}
-      {/if}
-      <div id="page-logo">
-          <a href="https://healthykidsinc.com" title="Home">
-              <img src="/assets/img/logo.svg" alt="Healthy Kids Inc Logo">
-          </a>
-      </div>
+      {/if}  
       <nav id="login-social-nav">
                     <ul>
                         <li><a href="https://www.facebook.com/HealthyKidsInc" title="Facebook" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook"></i></a></li>
                         <li><a href="http://www.youtube.com/user/HealthyKidsInc" title="YouTube" target="_blank"><span class="sr-only">YouTube</span><i class="fa fa-youtube"></i></a></li>
                         <li><a href="http://www.pinterest.com/healthykidsinc/" title="Pinterest" target="_blank"><span class="sr-only">Pinterest</span><i class="fa fa-pinterest"></i></a></li>
                         <li><a href="https://twitter.com/healthykidsinc" title="Twitter" target="_blank"><span class="sr-only">Twitter</span><i class="fa fa-twitter"></i></a></li>
+                         <li class="searchli"><i class="fa fa-search icon search"></i>
+                          {exp:search:simple_form channel="meal" result_page="templates/search-results" search_in="everywhere"}
+                                 
+                                          <input type="text" name="keywords" id="keywords" value="" size="18" maxlength="100">
+                                          <input type="submit" value="Go!" class="searchSubmit">
+                                          <i class="fa fa-times-circle icon closeSearch"></i>  
+                          {/exp:search:simple_form}
+                        </li>
                     </ul>
-                </nav><!-- /#login-social-nav -->  
-      {embed="includes/.sidenav"}
-        <!-- <div id="page-top" class="col-sm-12">
-            <div id="page-logo">
-                <a href="https://healthykidsinc.com" title="Home">
-                    <img src="/assets/img/logo.svg" alt="Healthy Kids Inc Logo">
-                </a>
-            </div></#logo -->
-        </div><!-- /.col-sm-12 --> 
+                </nav><!-- /#login-social-nav -->                   
+      
+      
+     
+        {embed="includes/.sidenav"}
+        <div class="mwelcome">
+        <ul id="mainUl">
+          {exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="640|728"}
+          <li id="browseLi">
+            Browse Recipes
+            <ul id="browseUl">
+              {exp:structure:nav start_from="/" max_depth="1"  include_ul="no" include="641|722|723"}
+            </ul>
+          </li>
+          {exp:structure:nav start_from="/" max_depth="1" include_ul="no" include="724|729|730"}
+        </ul>
+      </div>
       </div><!-- /.row -->
+       <script>
+                  $('.search').click(function(){
+                    $(this).hide();
+                    $('#keywords').show();
+                    $('.searchSubmit').show();
+                    $('.closeSearch').show();
+                  });
+                  $('.closeSearch').click(function(){
+                    $('.search').show();
+                    $('#keywords').hide();
+                    $('.searchSubmit').hide();
+                    $(this).hide();
+                  });
+                </script>
+      
