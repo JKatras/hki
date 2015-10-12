@@ -5,6 +5,9 @@
 #header.home-header {
 	position: absolute;
 }
+#header.home-header.active {
+	position: fixed;
+}
 #login-social-nav.home-social-nav {
 	position: absolute;
 }
