@@ -3179,7 +3179,7 @@ padding: 5px;
 }
 .finalTableWrap{
 	float: right;
-    width: 790px;
+   width: 820px;
 }
 
 .finalTable h3
@@ -3244,13 +3244,13 @@ display: block;
 	margin-left: 10px;
 }
 .icon{
-	color:#C7A900;
+	color:#86c4d4;
 	cursor: pointer;
 
 }
 .remove{
 	
-	
+	color: #C7A900 !important;
 	float: left;
     margin-top: 3px;
 }
@@ -3304,7 +3304,7 @@ display: block;
 }
 .addLine{
 	position: relative;
-
+	color:#C7A900 !important;
 	top: -24px;
     right: -7px;
 }
@@ -3722,29 +3722,15 @@ width: 251px;
 	margin-top: 20px;
 }
 .mealselector{
-	width: 390px;
+	width: 370px;
 	float: left;
 	position: relative;
 		margin-bottom: -27px;
 
 
 }
-#favorites img{
-	float: left;
-	border: 1px #09262D solid;
-	width: 152px;
-}
-#favorites p{
-	float: left;
-	width: 219px;
-	margin-left: 10px;
-}
-.fav_hold{
-	width: 390px;
-	float: left;
-	display: block;
-	margin-bottom: 5px;
-}
+
+
 .slide{
 	display: inline;
 	float: left;
@@ -3781,18 +3767,40 @@ width: 251px;
 	margin-left: 10px;
 }
 .week_hold{
-	width: 390px;
+	width: 150px;
 	float: left;
 	display: block;
 	margin-bottom: 5px;
+	
+    margin-left: 21px;
+    height: 175px;
+}
+.week_hold p{
+	text-align: left;
+	width: 150px;
+	
+}
+.week_hold img{
+	float: left;
+	border: 1px #09262D solid;
+	width: 152px;
+	cursor: pointer;
+}
+.week_hold p a{
+	color: #428bca;
 }
 #selectors{
-	width:390px;
+	width:370px;
 	float:left;
 }
 .drop_body{
 	display:none;
 	padding: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 direction:rtl;
+	 max-height: 400px;
+	 margin-bottom: 10px;
 
 }
 .controls{
@@ -3940,58 +3948,81 @@ position: relative;
   left: 25px;
   width: 23px;
 }
-.week_hold p{
-	float: left;
-	width: 225px;
-	margin-left: 10px;
-}
-.week_hold img{
-	float: left;
-	border: 1px #09262D solid;
-	width: 152px;
-	cursor: pointer;
-}
-.week_hold p a{
-	color: #428bca;
-	position: absolute;
-	top: 10px;
-}
-.week_hold{
-	position: relative;
-}
+
 #customWeek{
 	float: right;
-	width: 770px;
+	width: 820px;
+
+}
+.rowType{
+	width: 20px !important;
+	background-color: white;
+	border-right: none !important;
+	-webkit-transform: rotate(90deg);
+	padding: 0px !important;
+	
+	    margin-bottom: 121px;
+
+/* Firefox */
+-moz-transform: rotate(90deg);
+
+/* IE */
+-ms-transform: rotate(90deg);
+
+/* Opera */
+-o-transform: rotate(90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+color: #74B8CA;
+}
+#rowEnds{
+	float: right;
+    margin-top: -700px;
+}
+.rowType p{
+	margin-left: auto;
+    width: 139.428px;
 }
 .customWeekTable{
 	border: 1px solid #dbdfe0;
-	width: 790px;
+	width: 800px;
 	height: 769px;
 }
 .customWeekTable td{
+	cursor: pointer;
 	width: 108.428px;
 	height: 65.428px;
-	border: 1px solid #dbdfe0;
+	border-right: 1px solid #dbdfe0;
+	border-left: 1px solid #dbdfe0;
+	border-top: 1px solid #74b8ca;
+	border-bottom: 1px solid #74b8ca;
 	padding: 5px;
 	text-align: center;
 	position: relative;
 }
 .customWeekTable tr:nth-child(odd){
-	background-color: #fcf8e5;
+	background-color: #e0f0f5;
 }
 .customWeekTable tr:nth-child(even){
 	
+}
+.customrWeekTable tr{
+	border-right: none !important;
 }
 .customWeekTable th{
 	width: 108.428px;
 	height: 30.428px;
 	text-align: center;
 	border: 1px solid #dbdfe0;
-	background-color: #FFF0A8;
+	background-color: #74b8ca;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
 }
 #memberBody{
 	float: left;
-	width: 390px !important;
+	width: 370px !important;
 }
 .draggable{
 	cursor: pointer;
@@ -4043,7 +4074,7 @@ position: relative;
 	color: #C7A900;
 } 
 .allMeals{
-	max-width: 390px;
+	max-width: 380px;
 	float: left;
 }
 .allMeals:hover{
@@ -4061,6 +4092,19 @@ position: relative;
 	height: 25px;
 }
 #save:hover{
+	background-color:#09262D;
+	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+	box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
+}
+#save2{
+	border: none;
+	background-color: #C7A900;
+	color: white;
+	float: right;
+	height: 25px;
+}
+#save2:hover{
 	background-color:#09262D;
 	-webkit-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
 	-moz-box-shadow: 0px 4px 5px -1px rgba(163,161,163,1);
@@ -4272,6 +4316,7 @@ position: relative;
 }
 .search{
 	font-size: 30px;
+	color:#C7A900!important; 
 }
 .search:hover{
 	color: white !important;

@@ -1,0 +1,35 @@
+{embed="includes/.header"}
+<div class="page-row row">
+  <section class="page-content-wrap col-sm-12 login-wrap">
+  	<div class="col-sm-6">
+    <h1 class="page-title">{structure:page:title}</h1>
+<!--    <article>
+        <div>-->
+        {exp:member:login_form return="/members-home"}
+        
+        <!--  <p>-->
+        <div class="form-group">
+	        <label for="uname" class="log-label">Username</label>
+	        <input id="uname" class="log-input" type="text" name="username" value="">
+        </div>
+        <div class="form-group">
+          <!--</p>
+          <p>-->
+	        <label for="pword" class="log-label">Password</label>
+	        <input id="pword" class="log-input" type="password" name="password" value="">
+          <!--</p>        
+          <p>-->
+        </div>
+        <div class="form-group">
+          <input class="log-submit" type="submit" name="submit" value="Login">
+          <!--</p>-->
+		       <a class="normA" href="/templates/forgot_password">Forget your password?</a>
+		    </div>
+        {/exp:member:login_form}
+        
+<!--      </div>
+    </article>-->
+   </div> <!--/.col-sm-8-->
+  </section>
+</div><!-- /.row -->
+{embed="includes/.footer"}

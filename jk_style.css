@@ -280,3 +280,42 @@ but also won't be hovering on mobile...*/
 	}
 }
 
+/*-----------Login page---------------*/
+section.login-wrap {
+	text-align: center;
+}
+.login-wrap > div {
+	margin: 0 auto;
+	float: none;
+}
+.form-group label {
+	text-align: left;
+}
+label.log-label {
+	width: auto;
+}
+input.log-input {
+	width: 100%;
+}
+.login-wrap .form-group:last-child {
+	text-align: left;
+}
+.login-wrap .form-group:last-child input {
+	float: left;
+	display: block;
+}
+.login-wrap .normA {
+	display: block;
+	clear: both;
+} 
+@media only screen and (max-width: 767px) {
+	/*global changes*/
+	.page-row {
+		margin-top: 80px;
+	}
+	.page-title {
+		margin-bottom: 20px;
+	}
+	/*end global*/
+	
+}
