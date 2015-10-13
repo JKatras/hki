@@ -170,6 +170,9 @@ div#page-top-row.smaller {
 #page-top-row-mem, #page-top-row-mem #login-social-nav, #page-top-row-mem #header, .mwelcome {
 	position: absolute;
 }
+#page-top-row-mem #header.active {
+	position: fixed;
+}
 .sticky {
 	position: fixed;
 	top: 0;
@@ -310,6 +313,9 @@ input.log-input {
 } 
 @media only screen and (max-width: 767px) {
 	/*global changes*/
+	#page-top-row-mem ~ .page-row {
+		margin-top: 130px;
+	}
 	.page-row {
 		margin-top: 80px;
 	}
@@ -317,5 +323,7 @@ input.log-input {
 		margin-bottom: 20px;
 	}
 	/*end global*/
-	
+	.login-wrap > div {
+		padding: 0;
+	}
 }

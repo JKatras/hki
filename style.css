@@ -3099,7 +3099,8 @@ width: auto;
 opacity: 0.75;
 }
 .page-title{
-	margin:auto !important;
+	/*margin:auto !important;*/
+	margin: auto;
 }
 .small_meal{
 	float: left;
