@@ -70,6 +70,47 @@
 	    padding-left: 20px;
 	}
 }
+
+/*--------------Marc styles (moved from index.html)----------*/
+
+.home-overview-div.row:nth-child(odd){
+	background-color: #fafafc;
+}
+.home-overview-div.row{
+	max-width: 100% !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.home-overview-detail p{
+	width: 70%;
+    margin: auto;
+    font-size: 1.5em;
+}
+.sectionTitle{
+	font-size: 2em !important;
+	font-weight: bold;
+	color: #2B5661;
+}
+.home-overview-img img {
+   max-width: 950px;
+}
+ul.home-overview-detail{
+	margin-top: 28%;
+}
+@media only screen and (max-width: 767px) {
+	.home-overview-img img{
+		max-width: 100%;
+	}
+}
+form#freeWeekForm{
+	padding-top: 215px;
+}
+form#freeWeekForm input {
+    margin-bottom: 39px;
+}
+
+/*-----------------------------------------------*/
+
 .home-overview-div.row {
 	margin-bottom: 80px;
 	padding: 0;
