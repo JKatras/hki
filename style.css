@@ -201,11 +201,11 @@ div.container-fluid{
     z-index: 99;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 659px) {
+/*@media only screen and (min-width: 0px) and (max-width: 659px) {
 	#login-social-nav {
 		display: none;
 	}
-}
+}*/
 #login-social-nav ul {
 	list-style: none;
 	margin: 0;
