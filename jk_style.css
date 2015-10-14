@@ -206,6 +206,7 @@ div#page-top-row.smaller {
 	z-index: 20;
 }
 #page-top-row-mem {
+	background-image:url(/assets/img/page_top_bg_lg.jpg);
 	text-align: center;
 }
 #page-top-row-mem, #page-top-row-mem #login-social-nav, #page-top-row-mem #header, .mwelcome {
@@ -261,6 +262,9 @@ but also won't be hovering on mobile...*/
 	}
 	#page-top-row-mem {
 		text-align: left;
+	}
+	#mem-nav {
+		display: none;
 	}
 	#page-top-row.smaller {
 		height: 40px;
@@ -354,6 +358,11 @@ input.log-input {
 } 
 @media only screen and (max-width: 767px) {
 	/*global changes*/
+	#page-top-row-mem {
+		height: 60px;
+		padding-top: 0;
+		position: fixed;
+	}
 	#page-top-row-mem ~ .page-row {
 		margin-top: 130px;
 	}
