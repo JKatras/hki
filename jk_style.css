@@ -71,7 +71,7 @@
 	}
 }
 
-/*--------------Marc styles (moved from index.html)----------*/
+/*--------------MC styles (moved from index.html)----------*/
 
 .home-overview-div.row:nth-child(odd){
 	background-color: #fafafc;
@@ -333,18 +333,24 @@ but also won't be hovering on mobile...*/
 		text-decoration: none;
 	}
 }
-/*----------Marc styles (moved from members-home.html)----------*/
-<style>
+/*----------MC styles (moved from members-home.html)----------*/
 #membersHome{
-	width: 1200px;
-	margin: auto;
+	/*JK*/
+	margin: 0 auto;
+	height: auto; 
+	overflow: hidden;
+	/*/JK */
+	max-width: 1200px;
+	/*width: 1200px;*/
+	/*margin: auto;*/
 	float: left;
 }
 .memberBox{
-	width: 580px;
-    height: 450px;;
-	margin-right: 20px;
-	float: left;
+	/*width: 580px;*/
+	max-width: 585px;
+  height: 450px;;
+	/*margin-right: 20px;*/
+	/*float: left;*/
 
 }
 .memberBox a{

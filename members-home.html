@@ -1,0 +1,265 @@
+{embed="includes/.header_mem"}
+<?php $i = 0;
+$id = ee()->session->userdata('member_id'); // Get Member ID
+?>
+
+<div class="page-row row">
+	<section class="col-sm-12" id="membersHome">
+		<!-- Favorites -->
+		<div id="memberFav" class="memberBox col-xs-12 col-md-6">
+			<div class="boxHead"><h2>FAVORITES</h2></div>
+			<div class="boxContent">
+				<div class="favSlide">
+					<?php
+					// Get Member Favorites
+					$results = $this->EE->db->query('SELECT meal_id  
+					           						 from exp_fav_meal 
+					           						 where mem_id = '.$id.''); 
+					// Display Favorites
+					if ($results->num_rows() > 0) 
+					{
+						// For each favorite
+						foreach($results->result_array() as $row)
+						{
+							// Get meal details
+							$mealid = $row['meal_id']; // Set mealid because it doesnt work in query 
+							$mealinfo = $this->EE->db->query('SELECT t.title, d.field_id_22, d.entry_id from exp_channel_titles t, exp_channel_data d 
+							where t.entry_id = d.entry_id 
+							AND t.entry_id = '.$mealid.''); //get title and image name
+
+							if ($mealinfo->num_rows() > 0)// if exists
+							{
+
+								foreach ($mealinfo->result_array() as $meal) 
+								{
+									$url = str_replace(" ", "-", $meal['title']); //Remove Dash
+									$url =  preg_replace('/[^A-Za-z0-9\-]/', '', $url);//Remove
+									
+								
+
+									$imgname = str_replace("{filedir_3}", "", $meal['field_id_22']);// Replace inside mealimg name
+									// Start the hold for the meal
+									echo "<div class='mealHold'>"; 
+									echo "<div class='imgOptionHold'>
+									<a target='_blank' href='/templates/meal/".$url."'><img name='".$meal['title']."' id='".$meal['entry_id']."' class='draggable' src='/assets/img/meal_img/_Fav/".$imgname."' alt='".$meal['title']."'/></a><br />
+									"; // Echo Image
+									echo "<div class='mealControls'><a href='/create-a-week?mealid=".$meal['entry_id']."'>'<i class='fa fa-calendar'></i></a></div></div>
+									<p class='mealHoldP'><a target='_blank' href='/templates/meal/".$url."'>".$meal['title']. "</a></p>";// Echo Title
+									echo "</div>";
+								
+									
+								}
+							}
+						}
+					} 
+					?>
+				</div>
+			</div>
+		</div>
+		<!-- End Favorites -->
+
+		<!-- Featured Week -->
+		<div id="featuredWeek" class="memberBox col-xs-12 col-md-6">
+			<div class="boxHead"><h2>Featured Week</h2></div>
+			<div class="boxContent">
+				{exp:channel:entries channel="featured_week" limit="1" dynamic="off"}
+					<div class="mealHold">
+						<div id="viewShoppingList"><p>View Shopping List</p></div>
+					</div>
+					{meals}
+						<div class="mealHold">
+							<div class="imgOptionHold">
+								<a href="/templates/meal/{url_title}"><img src="{meal_image:Fav}" alt="{title}" class="img-responsive"/></a>
+								<div class="mealControls"><i class='fa fa-calendar'></i></div>
+							</div>
+	             			<p class="mealHoldP"><a href="/templates/meal/{url_title}">{title}</a></p>
+             			</div>
+					{/meals}
+				{/exp:channel:entries}
+			</div>
+		</div>
+		<!-- End Features Week -->
+
+		<!-- Saved Weeks -->
+		<div id="savedWeeks" class="memberBox col-xs-12 col-md-6">
+			<div class="boxHead"><h2>My Saved Weeks</h2></div>
+			<div class="boxContent">
+				<?php
+				  $weeks = $this->EE->db->query('SELECT week_name, week_id 
+				           from exp_cust_week
+				           where week_mem_id = '.$id.'');
+
+				          if ($weeks->num_rows() > 0) // If favorites
+				          {
+				              foreach($weeks->result_array() as $week)
+				              {
+				                echo"<div class='myWeek' id='".$week['week_id']."'>
+					                		<p><a href='/templates/editWeek?weekID=".$week['week_id']."'> ".$week['week_name']."</a> </p>
+				                	</div>
+				                	";
+				              }
+				          }
+				          else
+				          {
+				              echo"<div class='myWeek'>You have not created any custom weeks! Click <a href='/create-a-week'>here</a> to get started.</div>";
+				          }
+
+				?>
+			</div>
+		</div>
+		<!-- End Saved Weeks -->
+
+		<!-- Create Week -->
+		<div id="createMyWeek" class="memberBox col-xs-12 col-md-6">
+			<div class="boxHead"><h2>Create My Week</h2></div>
+			<div class="boxContent">
+				<h3 id="planNewWeek"><a href="/create-a-week">Begin Planning a New Week!</a></h3>
+				<a href="/create-a-week"><i id="newWeek" class="fa fa-calendar"></i></a>
+
+			</div>
+		</div>
+		<!-- End Create Week -->
+		
+		<!-- Extra Tips -->
+		<div id="extraTips" class="memberBox large col-xs-12">
+			<div class="boxHead"><h2>Extra Tips</h2></div>
+			<div class="boxContent"> 
+			<div id="prevBox" class="slideBox"><i class="fa fa-chevron-left arrow"></i></div>
+			{exp:channel:entries channel="extra_tips" limit="1" dynamic="off"}
+				{extra_tips_matrix}
+					{switch="<div class="tipsSlide">||"}
+						<div class="tipHolder">
+							<a href="{link}"><img src="{thumbnail}" alt="{tip_title}"/></a>
+							<p>{tip_title}</p>
+						</div>
+					{switch="||</div>"}
+				{/extra_tips_matrix}
+				</div>
+			{/exp:channel:entries}
+			<div id="nextBox" class="slideBox"><i class="fa fa-chevron-right arrow"></i></div>
+			</div>
+		</div>
+		<!-- End Extra Tips -->
+
+		<!-- Blog -->
+		<div id="blog" class="memberBox large col-xs-12">
+			<div class="boxHead"><h2>Blog</h2></div>
+			<div class="boxContent">
+				<div id="prevBox" class="slideBox2"><i class="fa fa-chevron-left arrow"></i></div>
+				 {exp:channel:entries channel="blog" limit="20" dynamic="off" orderby="date" sort="decs"}
+				 {switch="<div class="blogSlide">||||"}
+				 	<div class="blogHolder">
+					 	<a href="/templates/blog/{url_title}" title="{title}">
+					 		 <img src="{if blog_image}{blog_image:Small}{if:else}/assets/img/blog_img/no_img.jpg{/if}" alt="{title}" />
+					 		 <p>{title}</p>
+					 	</a>
+				 	</div>
+				 {switch="||||</div>"}
+				 {/exp:channel:entries}
+				<div id="nextBox" class="slideBox2"><i class="fa fa-chevron-right arrow"></i></div>
+			</div>
+		</div>
+		<!-- End Blog -->
+	</section>
+</div> 
+
+<script type="text/javascript">
+var slideAmount = 0;
+var slideAmount2 = 0;
+
+$(".blogSlide").each(function(e) {
+  if (e != 0)
+      $(this).hide();
+});
+
+$(".tipsSlide").each(function(e) {
+  if (e != 0)
+      $(this).hide();
+});
+
+$('.slideBox').click(function(){
+	var direction = $(this).attr('id');
+	if(direction == 'prevBox')
+	{
+		if (slideAmount != 0)
+		{
+			console.log(slideAmount);
+            $(".tipsSlide:visible").prev().show().next().hide();
+            slideAmount--;
+		}
+        else 
+        {
+            $(".tipsSlide:visible").hide();
+            $(".tipsSlide:last").show();
+            slideAmount = 1;
+        }
+        
+	}
+
+	if(direction == 'nextBox')
+	{
+		if (slideAmount != 1 )
+		{
+			console.log(slideAmount);
+            $(".tipsSlide:visible").next().show().prev().hide();
+            slideAmount++;
+		}
+        else {
+            $(".tipsSlide:visible").hide();
+            $(".tipsSlide:first").show();
+            slideAmount = 0;
+        }
+
+	}
+});
+
+$('.slideBox2').click(function(){
+	var direction = $(this).attr('id');
+	if(direction == 'prevBox')
+	{
+		if (slideAmount != 0)
+		{
+			console.log(slideAmount);
+            $(".blogSlide:visible").prev().show().next().hide();
+            slideAmount--;
+		}
+        else 
+        {
+            $(".blogSlide:visible").hide();
+            $(".blogSlide:last").show();
+            slideAmount = 3;
+        }
+        
+	}
+
+	if(direction == 'nextBox')
+	{
+		if (slideAmount != 3 )
+		{
+			console.log(slideAmount);
+            $(".blogSlide:visible").next().show().prev().hide();
+            slideAmount++;
+		}
+        else {
+            $(".blogSlide:visible").hide();
+            $(".blogSlide:first").show();
+            slideAmount = 0;
+        }
+
+	}
+});
+
+	
+		/*var id = $(this).parent().parent().attr("id");
+        if ($(.blogSlide:visible").next().length != 0)
+            $(.blogSlide:visible").next().show().prev().hide();
+        else {
+            $(.blogSlide:visible").hide();
+            $(.blogSlide:first").show();
+        }*/
+	
+
+
+
+</script>
+{embed="includes/.footer}
