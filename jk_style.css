@@ -229,7 +229,7 @@ but also won't be hovering on mobile...*/
 		text-decoration: none;
 	}
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 	/*#headNav {
 		width: auto;
 		margin: 0;
@@ -239,7 +239,7 @@ but also won't be hovering on mobile...*/
 		padding-right: 0;
 	}
 	#page-logo {
-		position: fixed;
+		position: absolute;
 		left: 30%;
 	}
 	#header {
@@ -347,7 +347,7 @@ but also won't be hovering on mobile...*/
 }
 .memberBox{
 	/*width: 580px;*/
-	max-width: 585px;
+	/*max-width: 585px;*/
   height: 450px;;
 	/*margin-right: 20px;*/
 	/*float: left;*/
@@ -371,7 +371,7 @@ but also won't be hovering on mobile...*/
 }
 .boxContent{
 	padding-top: 20px;
-	padding-left: 35px;
+	/*padding-left: 35px;*/
 }
 .wistia_video_foam_dummy{
 	display: none !important;
@@ -385,10 +385,13 @@ but also won't be hovering on mobile...*/
 	background-color: #C7A900;
 }
 #memberFav .boxContent{
-	height: 360px;
+	/*height: 360px;*/
 	overflow-y: scroll;
 	overflow-x: hidden;
 	 direction:rtl;
+}
+#memberFav .boxContent, #featuredWeek .boxContent {
+	height: 360px;
 }
 #featuredWeek .boxHead{
 	background-color: #072f42;
@@ -420,6 +423,7 @@ but also won't be hovering on mobile...*/
 	float: left;
 	width: 150px;
 	margin: 10px;
+	padding: 0;
 	font-size: 13px;
 	text-align: left;
 	height: 165px;
@@ -469,7 +473,7 @@ but also won't be hovering on mobile...*/
 .favSlide{
 	/*width: 580px;*/
 	height: 300px;
-	padding-left: 44px;
+	/*padding-left: 44px;*/
 }
 #viewShoppingList{
 	height: 93px;
@@ -508,6 +512,7 @@ but also won't be hovering on mobile...*/
 .large{
 	width: 100%;
 	height: 300px;
+	padding: 0;
 }
 .myWeek{
 	width: 150px;
@@ -588,7 +593,7 @@ but also won't be hovering on mobile...*/
 #prevBox{
 	float: left;
     margin-top: 64px;
-    margin-left: -33px;
+   /* margin-left: -33px;*/
 }
 
 #nextBox{
@@ -633,6 +638,32 @@ but also won't be hovering on mobile...*/
 }
 /*----------------------------------------*/
 
+/*--------------JK member styles--------------*/
+@media only screen and (min-width:992px){
+	#memberFav, #featuredWeek, #savedWeeks, #createMyWeek {
+		max-width: 600px;
+	}
+}	
+@media only screen and (max-width:991px) {
+	#memberFav, #featuredWeek, #savedWeeks, #createMyWeek {
+		max-width: 800px;
+		float: none;
+		margin: 0 auto;
+	}
+	@membersHome {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#featuredWeek .boxContent {
+		overflow-y: scroll;
+    overflow-x: hidden;
+    direction: rtl;
+	}
+}
+
+/*------------------------------------------*/
+
 /*-----------Login page---------------*/
 section.login-wrap {
 	text-align: center;
@@ -668,8 +699,15 @@ input.log-input {
 		padding-top: 0;
 		position: fixed;
 	}
-	#page-top-row-mem ~ .page-row {
+	/*#page-top-row-mem ~ .page-row {
 		margin-top: 130px;
+	}*/
+	#page-top-row-mem #page-logo {
+		z-index: 999;
+		position: fixed;
+	}
+	#page-top-row-mem #login-social-nav {
+		z-index: 99;
 	}
 	.page-row {
 		margin-top: 80px;
@@ -680,5 +718,28 @@ input.log-input {
 	/*end global*/
 	.login-wrap > div {
 		padding: 0;
+	}
+}
+/*for very narrow screens*/
+@media only screen and (max-width: 400px) {
+	#page-top-row-mem #page-logo {
+		padding-top:12px;
+		margin-left: 10px;
+	}
+	#page-top-row-mem #page-logo img {
+		width: 65px;
+	}
+	#page-top-row-mem #keywords {
+		width: 150px;
+	}
+	#login-social-nav ul li.searchli {
+		margin-left: 50px;
+	}
+	#page-top-row-mem .searchSubmit {
+		font-size: 14px;
+		padding: 2px 3px;	
+	}
+	#page-top-row-mem #header-menu-close-btn {
+		padding: 10px 10px 10px 5px;
 	}
 }

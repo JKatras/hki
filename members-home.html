@@ -63,6 +63,7 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 		<div id="featuredWeek" class="memberBox col-xs-12 col-md-6">
 			<div class="boxHead"><h2>Featured Week</h2></div>
 			<div class="boxContent">
+				
 				{exp:channel:entries channel="featured_week" limit="1" dynamic="off"}
 					<div class="mealHold col-xs-6 col-sm-4 col-md-4">
 						<div id="viewShoppingList"><p>View Shopping List</p></div>
@@ -73,10 +74,11 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 								<a href="/templates/meal/{url_title}"><img src="{meal_image:Fav}" alt="{title}" class="img-responsive"/></a>
 								<div class="mealControls"><i class='fa fa-calendar'></i></div>
 							</div>
-	             			<p class="mealHoldP"><a href="/templates/meal/{url_title}">{title}</a></p>
-             			</div>
+	             	<p class="mealHoldP"><a href="/templates/meal/{url_title}">{title}</a></p>
+             	</div>
 					{/meals}
 				{/exp:channel:entries}
+				
 			</div>
 		</div>
 		<!-- End Features Week -->
