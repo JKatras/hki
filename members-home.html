@@ -4,7 +4,7 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 ?>
 
 <div class="page-row row">
-	<section class="col-sm-12" id="membersHome">
+	<section id="membersHome">
 		<!-- Favorites -->
 		<div id="memberFav" class="memberBox col-xs-12 col-md-6">
 			<div class="boxHead"><h2>FAVORITES</h2></div>
@@ -39,7 +39,8 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 
 									$imgname = str_replace("{filedir_3}", "", $meal['field_id_22']);// Replace inside mealimg name
 									// Start the hold for the meal
-									echo "<div class='mealHold'>"; 
+									// JK addition bootstrap classes
+									echo "<div class='mealHold col-xs-6 col-sm-4 col-md-4'>"; 
 									echo "<div class='imgOptionHold'>
 									<a target='_blank' href='/templates/meal/".$url."'><img name='".$meal['title']."' id='".$meal['entry_id']."' class='draggable' src='/assets/img/meal_img/_Fav/".$imgname."' alt='".$meal['title']."'/></a><br />
 									"; // Echo Image
@@ -63,11 +64,11 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 			<div class="boxHead"><h2>Featured Week</h2></div>
 			<div class="boxContent">
 				{exp:channel:entries channel="featured_week" limit="1" dynamic="off"}
-					<div class="mealHold">
+					<div class="mealHold col-xs-6 col-sm-4 col-md-4">
 						<div id="viewShoppingList"><p>View Shopping List</p></div>
 					</div>
 					{meals}
-						<div class="mealHold">
+						<div class="mealHold col-xs-6 col-sm-4 col-md-4">
 							<div class="imgOptionHold">
 								<a href="/templates/meal/{url_title}"><img src="{meal_image:Fav}" alt="{title}" class="img-responsive"/></a>
 								<div class="mealControls"><i class='fa fa-calendar'></i></div>

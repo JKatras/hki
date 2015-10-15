@@ -370,6 +370,7 @@ but also won't be hovering on mobile...*/
 	border-radius: 3px;
 }
 .boxContent{
+	padding-top: 20px;
 	padding-left: 35px;
 }
 .wistia_video_foam_dummy{
@@ -466,7 +467,7 @@ but also won't be hovering on mobile...*/
 	color: white !important;
 }
 .favSlide{
-	width: 580px;
+	/*width: 580px;*/
 	height: 300px;
 	padding-left: 44px;
 }
