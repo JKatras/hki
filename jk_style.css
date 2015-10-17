@@ -743,3 +743,59 @@ input.log-input {
 		padding: 10px 10px 10px 5px;
 	}
 }
+
+/*------------breakfast/lunch/dinner browse pages--------------*/
+.week {
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 30px;
+	max-width: 1200px;
+	text-align: center;
+}
+.small_meal {	
+	padding: 0 10px;
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	/*margin: 0 10px;*/
+}
+.small_meal .circular, .small_meal p {
+	margin: 0 auto;
+}
+@media only screen and (min-width:768px) {
+/* .small_meal {
+ 	max-width: 170px;
+ }*/
+}
+@media only screen and (max-width:767px) {
+	.small_meal {
+		padding-bottom: 15px;
+		padding-left: 50px;
+	}
+	.small_meal a {
+		display: block;
+	}
+	.small_meal p {
+		width: 100%;
+	}
+	.small_meal .circular-title {
+		float: left;
+		text-align: left;
+		font-size: 28px;
+		padding-top: 50px;
+		padding-left: 50px;
+		height: 150px;
+		display: inline-block;
+	}
+	.small_meal .circular {
+		display: inline-block;
+		float: left;
+	}
+}
+@media only screen and (max-width:400px) {
+	
+}
+
+
+
+/*----------------------------------------------------------------*/

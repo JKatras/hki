@@ -1,0 +1,30 @@
+
+{embed="includes/.header_mem"}
+   
+<div class="page-row row">
+  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+    <h1 class="page-title">{structure:page:title}</h1>
+
+    {exp:channel:entries channel="pages" limit="1" dynamic="on"}
+      {content}
+    {/exp:channel:entries}
+    {exp:channel:entries channel="meal" limit="100" dynamic="off" paginate="bottom" category="109"}
+  
+      
+   
+    {switch="<div class="week">||||"}
+      <div class="small_meal">
+      		<div class="circular"><a href="/templates/meal/{url_title}"><img src="{meal_image:Small}" alt="{title}"/></a></div>
+		    <p><a href="/templates/meal/{url_title}">{title}</a></p>
+		</div>
+	  
+  {switch="||||</div>"}
+
+    {/exp:channel:entries}
+
+
+  </section>
+</div><!-- /.row -->
+
+       
+{embed="includes/.footer"}

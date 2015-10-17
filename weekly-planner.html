@@ -1,0 +1,44 @@
+
+{embed="includes/.header_mem"}
+   
+<div class="page-row row">
+  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+    <h1 class="page-title">{structure:page:title}</h1>
+
+    {exp:channel:entries channel="pages" limit="1" dynamic="on"}
+      {content}
+    {/exp:channel:entries}
+    {exp:channel:entries channel="week" limit="10" dynamic="off" paginate="bottom"}
+    <div class="week">
+      <h3><a href="/templates/week/{url_title}" class="week_a">{title} PLANNER</a></h3>
+      <hr>
+      {meals_in_week}
+      <div class="small_meal">
+      		<div class="circular"><a href="/templates/meal/{url_title}"><img src="{meal_image:Small}" alt="{title}"/></a></div>
+		    <p><a href="/templates/meal/{url_title}">{title}</a></p>
+		</div>
+	  {/meals_in_week}
+  </div>
+    {paginate}
+      <div id="pag_holder">
+        {if previous_page}
+        <div class="pagination">
+            <a href="{auto_path}">Previous Page</a>
+        </div>
+        {/if}
+        {if next_page}
+        <div class="pagination2">
+            <a href="{auto_path}" id="next">Next Page</a>
+        </div>
+        {/if}
+      </div>
+    {/paginate}
+
+    {/exp:channel:entries}
+
+
+  </section>
+</div><!-- /.row -->
+
+       
+{embed="includes/.footer"}
