@@ -759,21 +759,22 @@ input.log-input {
 	vertical-align: top;
 	/*margin: 0 10px;*/
 }
+.small_meal a {
+	display: block;
+}
 .small_meal .circular, .small_meal p {
 	margin: 0 auto;
 }
-@media only screen and (min-width:768px) {
-/* .small_meal {
- 	max-width: 170px;
- }*/
+@media only screen and (max-width:991px) {
+ .small_meal {
+ 	float: left;
+ 	padding-bottom: 15px;
+ }
 }
 @media only screen and (max-width:767px) {
 	.small_meal {
 		padding-bottom: 15px;
 		padding-left: 50px;
-	}
-	.small_meal a {
-		display: block;
 	}
 	.small_meal p {
 		width: 100%;
@@ -785,6 +786,7 @@ input.log-input {
 		padding-top: 50px;
 		padding-left: 50px;
 		height: 150px;
+		width: 70%;
 		display: inline-block;
 	}
 	.small_meal .circular {

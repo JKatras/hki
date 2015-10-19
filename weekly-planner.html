@@ -2,23 +2,35 @@
 {embed="includes/.header_mem"}
    
 <div class="page-row row">
-  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+  <section class="page-content-wrap col-xs-12">
     <h1 class="page-title">{structure:page:title}</h1>
 
     {exp:channel:entries channel="pages" limit="1" dynamic="on"}
       {content}
     {/exp:channel:entries}
     {exp:channel:entries channel="week" limit="10" dynamic="off" paginate="bottom"}
-    <div class="week">
-      <h3><a href="/templates/week/{url_title}" class="week_a">{title} PLANNER</a></h3>
-      <hr>
-      {meals_in_week}
-      <div class="small_meal">
-      		<div class="circular"><a href="/templates/meal/{url_title}"><img src="{meal_image:Small}" alt="{title}"/></a></div>
-		    <p><a href="/templates/meal/{url_title}">{title}</a></p>
-		</div>
-	  {/meals_in_week}
-  </div>
+    <div class="row">
+	    <div class="week">
+	      <h3><a href="/templates/week/{url_title}" class="week_a">{title} PLANNER</a></h3>
+	      <hr>
+	      {meals_in_week}
+	      <div class="small_meal col-xs-12 col-sm-4 col-md-2">
+	      	<a href="/templates/meal/{url_title}">
+	      		<div class="circular">
+	      			<img src="http://placehold.it/150x150" alt="" />
+	      			<!--<img src="{meal_image:Small}" alt="{title}"/>-->
+	      		</div> <!--/circular-->
+	      		<div class="circular-title">
+			    		<p>
+			    			{title}
+			    			<!--<a href="/templates/meal/{url_title}">{title}</a>-->
+			    		</p>
+			    	</div> <!--/circular-title-->
+			    </a>
+				</div> <!--/small_meal-->
+	  	{/meals_in_week}
+  		</div> <!--/week-->
+  	</div> <!--/row-->
     {paginate}
       <div id="pag_holder">
         {if previous_page}
@@ -38,7 +50,7 @@
 
 
   </section>
-</div><!-- /.row -->
+</div><!-- /.page-row -->
 
        
 {embed="includes/.footer"}
