@@ -760,6 +760,7 @@ input.log-input {
 	/*margin: 0 10px;*/
 }
 .small_meal a {
+	overflow: hidden;
 	display: block;
 }
 .small_meal .circular, .small_meal p {
@@ -779,7 +780,7 @@ input.log-input {
 	.small_meal p {
 		width: 100%;
 	}
-	.small_meal .circular-title {
+	.circular-title {
 		float: left;
 		text-align: left;
 		font-size: 28px;
@@ -789,13 +790,56 @@ input.log-input {
 		width: 70%;
 		display: inline-block;
 	}
-	.small_meal .circular {
+	.circular {
 		display: inline-block;
 		float: left;
 	}
 }
-@media only screen and (max-width:400px) {
-	
+@media only screen and (max-width:550px) {
+	.small_meal {
+		padding-left: 20px;
+	}
+	.circular {
+		height: auto;
+		width: auto;
+	}
+	.circular img {
+		width: 100px;
+		height: 100px;
+	}
+	.circular-title {
+		/*max-width: 80%;*/
+		font-size: 18px;
+		padding-top: 20px;
+		padding-left: 20px;
+		height: auto;
+	}
+}
+@media only screen and (max-width:350px) {
+	.small_meal {
+		padding-left: 0;
+	}
+	.small_meal p {
+		width: 90%;
+	}
+	.circular, .circular-title {
+		width: 100%;
+		text-align: center;
+	}
+	.circular-title {
+		padding-left: 0;
+		padding-top: 10px;
+	}
+	.circular-title p {
+		margin: 0 auto;
+	}
+	.circular img {
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		border-radius: 150px;
+		margin: 0 auto;
+		text-align: center;
+	} 
 }
 
 
