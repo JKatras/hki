@@ -4,11 +4,11 @@
 <div class="page-row row">
   <section class="page-content-wrap col-xs-12">
     <h1 class="page-title">{structure:page:title}</h1>
-	
+
     {exp:channel:entries channel="pages" limit="1" dynamic="on"}
       {content}
     {/exp:channel:entries}
-    {exp:channel:entries channel="meal" limit="100" dynamic="off" paginate="bottom" category="110"}
+    {exp:channel:entries channel="meal" limit="100" dynamic="off" paginate="bottom" category="111"}
   
       
    
@@ -16,23 +16,22 @@
       <div class="small_meal col-xs-12 col-sm-4 col-md-2">
       	<a href="/templates/meal/{url_title}">
       		<div class="circular">
-      			
-		      		<!--<img src="{meal_image:Small}" alt="{title}"/>-->
-		      		<img src="http://placehold.it/150x150" alt="" />
-		      	
-		      </div>
-		      <div class="circular-title">
-				    <p>
-				    	{title}
-				    	<!--<a href="/templates/meal/{url_title}">{title}</a>-->
-				    </p>
-				  </div>
+      			<!--<img src="{meal_image:Small}" alt="{title}"/>-->
+      			<img src="http://placehold.it/150x150" alt="" />
+      		</div>
+      		<div class="circular-title">
+			    	<p>
+			    		{title}
+			    		<!--<a href="/templates/meal/{url_title}">{title}</a>-->
+			    	</p>
+		    	</div>
 		    </a>
 			</div>
 	  
   {switch="||||</div></div>"}
 
     {/exp:channel:entries}
+
 
   </section>
 </div><!-- /.row -->
