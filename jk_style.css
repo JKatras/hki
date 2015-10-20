@@ -841,7 +841,20 @@ input.log-input {
 		text-align: center;
 	} 
 }
-
-
-
 /*----------------------------------------------------------------*/
+
+/*----------------------------Meal page-----------------------------*/
+.meal-section {
+	text-align: center;
+}
+.meal-section .cap {
+	margin: 0 auto;
+}
+.mainMealImg {
+	margin: 0 auto;
+	display: block;
+}
+#directions, .ingredients_wrap {
+	text-align: left;
+}
+/*--------------------------------------------------------------------*/

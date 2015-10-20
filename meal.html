@@ -1,4 +1,3 @@
-
 <?php 
 $id = ee()->session->userdata('member_id');
 function percent($amount)
@@ -9,10 +8,11 @@ function percent($amount)
 {embed="includes/.header_mem"}
  {exp:channel:entries channel="meal" limit="1" dynamic="on"}
 <div class="page-row row">
-  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+  <section class="meal-section page-content-wrap col-xs-12">
     
-    <h1 class="page-title">{title} 
-   <script type="text/javascript">
+  	<h1 class="page-title">{title}
+  	<!--why is script inside h1 tag? -->
+   	<script type="text/javascript">
    			var meal_id = "{entry_id}";
        		var mem_id = <?php echo $id;?>;
        		$.ajax({
@@ -69,21 +69,19 @@ function percent($amount)
        		});
 
 	</script>
-	</h1>
-	<center><h4 class="cap">{meal_discription}</h4></center>
-   <center> <img src="{meal_image:Main}" class="attachment-500x500 wp-post-image mainMealImg" alt="{title}" /></center>
-
+		</h1>
+		<h4 class="cap">{meal_discription}</h4>
+   	<!--<img src="{meal_image:Main}" class="attachment-500x500 wp-post-image mainMealImg" alt="{title}" />-->
+   	<img src="http://placehold.it/500x330" class="attachment-500x500 wp-post-image mainMealImg" alt="{title}" />
+   	<div class="row">
+			<div id="directions" class="col-xs-12 col-sm-6">
+			<i title='Print' class='fa fa-print icon print'></i>
+			{directions}
+			{if prep_notes}<span style="text-decoration: underline;"><strong>Prep Notes:</strong></span>
+			{prep_notes}{/if}
+		</div>
 	
-	
-	<div id="directions">
-		<i title='Print' class='fa fa-print icon print'></i>
-		{directions}
-		{if prep_notes}<span style="text-decoration: underline;"><strong>Prep Notes:</strong></span>
-		{prep_notes}{/if}
-	</div>
-	
-
-	<div class="ingredients_wrap">
+			<div class="ingredients_wrap col-xs-12 col-sm-6">
 		<span style="text-decoration: underline;"><strong>Ingredients:</strong></span>
 		<ul>
 			{ingredients}
@@ -116,82 +114,70 @@ function percent($amount)
 		{/if}
 		</ul>
 	</div>
-
-	
-
-	
-	{if video_code}
-	<div class="vid_box">
-		<h3 class="slist">How-To Video:</h3>{video_code}</div>
-	{/if}
-
-	
-
-<div class="nutrition format_text entry-content">
-	<div class="recimage">
-		<div class="wp-nutrition-label" style="float:left;">
-		  <span class="heading">Nutrition Facts</span>
-		  <hr>
-		  <span class="alignleft">Serving Size {serving_size}</span>
-		  <span class="alignright">Servings {number_of_servings}</span>
-		  <hr class="heavy">
-		  <strong>Amount Per Serving</strong>
-		   <hr>
-		   <span class="alignleft">Calories {calories}</span>
-		   <span class="alignright">Calories from Fat {cal_from_fat}</span>
-		   <hr>
-		   <div class="alignright"><strong>% Daily Value*</strong></div><div style="clear: both"></div>
-		   <span class="alignleft"><strong>Total Fat</strong> {total_fat}</span>
-		   <span class="alignright"><?php $total = '{total_fat}'/64; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="alignleft indent"><strong>Saturated Fat:</strong> {satfat}</span>
-		   <span class="alignright"><?php $total = '{satfat}'/20; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="alignleft"><strong>Cholesterol</strong> {cholesterol}</span>
-		   <span class="alignright"><?php $total = '{cholesterol}'/300; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="alignleft"><strong>Sodium</strong> {sodium}</span>
-		   <span class="alignright"><?php $total = '{sodium}'/2400; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="alignleft"><strong>Total Carbohydrate</strong> {total_carbohydrates}</span>
-		   <span class="alignright"><?php $total = '{total_carbohydrates}'/300; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="alignleft indent">Dietary Fiber 8.57g</span>
-		   <span class="alignright"><?php $total = 8.57/25; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="indent">Sugars {sugars}</span>
-		   <hr>
-		   <span class="alignleft"><strong>Protein</strong> {protein}</span>
-		   <span class="alignright"><?php $total = '{protein}'/50; echo "%" . percent($total);?></span>
-		   <hr>
-		   <span class="small">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</span>
-		</div>
-
-	</div>
-</div>
-
-
-
-   
-
-    	<script>
-    	$(function() {
-       	$('.print').click(function(){
-      
-      var printInfo = $('.page-content-wrap').html();
-      /*console.log(printInfo);*/
-      var myStyle = '<link rel="stylesheet" href="/assets/css/printMeal.css" />';
-      w=window.open(null, 'Print_Page', 'scrollbars=yes');   
-      w.document.write(myStyle + printInfo);
-      w.document.close();
-          
-   });
-       });
-       </script>
-
-    
-  
-
+		</div> <!--/ row-->
+		<div class="row">
+			{if video_code}
+			<div class="vid_box col-xs-12 col-sm-6">
+				<h3 class="slist">How-To Video:</h3>{video_code}</div>
+			{/if}
+		
+			<div class="nutrition format_text entry-content col-xs-12 col-sm-6">
+				<div class="recimage">
+				<div class="wp-nutrition-label" style="float:left;">
+				  <span class="heading">Nutrition Facts</span>
+				  <hr>
+				  <span class="alignleft">Serving Size {serving_size}</span>
+				  <span class="alignright">Servings {number_of_servings}</span>
+				  <hr class="heavy">
+				  <strong>Amount Per Serving</strong>
+				   <hr>
+				   <span class="alignleft">Calories {calories}</span>
+				   <span class="alignright">Calories from Fat {cal_from_fat}</span>
+				   <hr>
+				   <div class="alignright"><strong>% Daily Value*</strong></div><div style="clear: both"></div>
+				   <span class="alignleft"><strong>Total Fat</strong> {total_fat}</span>
+				   <span class="alignright"><?php $total = '{total_fat}'/64; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="alignleft indent"><strong>Saturated Fat:</strong> {satfat}</span>
+				   <span class="alignright"><?php $total = '{satfat}'/20; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="alignleft"><strong>Cholesterol</strong> {cholesterol}</span>
+				   <span class="alignright"><?php $total = '{cholesterol}'/300; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="alignleft"><strong>Sodium</strong> {sodium}</span>
+				   <span class="alignright"><?php $total = '{sodium}'/2400; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="alignleft"><strong>Total Carbohydrate</strong> {total_carbohydrates}</span>
+				   <span class="alignright"><?php $total = '{total_carbohydrates}'/300; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="alignleft indent">Dietary Fiber 8.57g</span>
+				   <span class="alignright"><?php $total = 8.57/25; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="indent">Sugars {sugars}</span>
+				   <hr>
+				   <span class="alignleft"><strong>Protein</strong> {protein}</span>
+				   <span class="alignright"><?php $total = '{protein}'/50; echo "%" . percent($total);?></span>
+				   <hr>
+				   <span class="small">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</span>
+				</div>
+		
+			</div>
+			</div>
+		</div> <!--/ row-->
+		
+		<script>
+	    	$(function() {
+	       	$('.print').click(function(){
+		      	var printInfo = $('.page-content-wrap').html();
+		      	/*console.log(printInfo);*/
+		      	var myStyle = '<link rel="stylesheet" href="/assets/css/printMeal.css" />';
+		     		w=window.open(null, 'Print_Page', 'scrollbars=yes');   
+		     		w.document.write(myStyle + printInfo);
+		      	w.document.close();
+	          
+	  		 	});
+	      });
+	      </script>
 
   </section>
 </div><!-- /.row -->
