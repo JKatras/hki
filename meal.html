@@ -1,0 +1,200 @@
+
+<?php 
+$id = ee()->session->userdata('member_id');
+function percent($amount)
+{
+	return round($amount * 100);
+}
+?>
+{embed="includes/.header_mem"}
+ {exp:channel:entries channel="meal" limit="1" dynamic="on"}
+<div class="page-row row">
+  <section class="page-content-wrap col-sm-8 col-sm-offset-2">
+    
+    <h1 class="page-title">{title} 
+   <script type="text/javascript">
+   			var meal_id = "{entry_id}";
+       		var mem_id = <?php echo $id;?>;
+       		$.ajax({
+       			url: '/templates/checkFav',
+       			type: 'GET',
+       			data: {
+       				'meal_id' : meal_id,
+					'mem_id' : mem_id
+       			},
+       			success: function(data){
+       				$('.page-title').append(data);
+       					$("#fav").click(function(){
+       		$(this).removeClass("fa-heart-o");
+       		$(this).addClass("fa-heart");
+       		$(this).removeAttr("id");
+       		$(this).attr("id", "fav2");
+       		var meal_id = "{entry_id}";
+       		var mem_id = <?php echo $id;?>;
+       		$.ajax({
+       			url: '/templates/addtofav',
+       			type: 'GET',
+       			data: {
+       				'meal_id' : meal_id,
+					'mem_id' : mem_id
+       			},
+       			'success' : function(){
+       				alert("Added to favorites");
+       			}
+       		});
+
+       	});
+       	$("#fav2").click(function(){
+       		console.log("dsdas");
+       		$(this).removeClass("fa-heart");
+       		$(this).addClass("fa-heart-o");
+       		$(this).removeAttr("id");
+       		$(this).attr("id", "fav");
+       		var meal_id = "{entry_id}";
+       		var mem_id = <?php echo $id;?>;
+       		$.ajax({
+       			url: '/templates/removeFromfav',
+       			type: 'GET',
+       			data: {
+       				'meal_id' : meal_id,
+					'mem_id' : mem_id
+       			},
+       			'success' : function(){
+       				alert("Removed to favorites");
+       			}
+       		});
+
+       	});
+       			}
+       		});
+
+	</script>
+	</h1>
+	<center><h4 class="cap">{meal_discription}</h4></center>
+   <center> <img src="{meal_image:Main}" class="attachment-500x500 wp-post-image mainMealImg" alt="{title}" /></center>
+
+	
+	
+	<div id="directions">
+		<i title='Print' class='fa fa-print icon print'></i>
+		{directions}
+		{if prep_notes}<span style="text-decoration: underline;"><strong>Prep Notes:</strong></span>
+		{prep_notes}{/if}
+	</div>
+	
+
+	<div class="ingredients_wrap">
+		<span style="text-decoration: underline;"><strong>Ingredients:</strong></span>
+		<ul>
+			{ingredients}
+				<li>{amount} {if amount_type != "Each"}{amount_type}{/if} {ingredient}</li>
+			{/ingredients}
+		</ul>
+		{if ingredients_2}
+		<span><strong>{ingredient_list_title_2}</strong></span>
+		<ul>
+			{ingredients_2}
+				<li>{amount_2} {if amount_type_2 != "Each"}{amount_type_2}{/if} {ingredient_2}</li>
+			{/ingredients_2}
+		</ul>
+		{/if}
+		{if ingredients_3}
+		<span ><strong>{ingredient_list_title_3}</strong></span>
+			<ul>
+				{ingredients_3}
+							<li>{amount_3} {if amount_type_3 != "Each"}{amount_type_3}{/if} {ingredient_3}</li>
+				{/ingredients_3}
+			</ul>
+		{/if}
+		{if ingredients_4}
+		<span><strong>{ingredient_list_title_4}</strong></span>
+			<ul>
+				{ingredients_4}
+							<li>{amount_4} {if amount_type_4 != "Each"}{amount_type_4}{/if} {ingredient_4}</li>
+				{/ingredients_4}
+			</ul>
+		{/if}
+		</ul>
+	</div>
+
+	
+
+	
+	{if video_code}
+	<div class="vid_box">
+		<h3 class="slist">How-To Video:</h3>{video_code}</div>
+	{/if}
+
+	
+
+<div class="nutrition format_text entry-content">
+	<div class="recimage">
+		<div class="wp-nutrition-label" style="float:left;">
+		  <span class="heading">Nutrition Facts</span>
+		  <hr>
+		  <span class="alignleft">Serving Size {serving_size}</span>
+		  <span class="alignright">Servings {number_of_servings}</span>
+		  <hr class="heavy">
+		  <strong>Amount Per Serving</strong>
+		   <hr>
+		   <span class="alignleft">Calories {calories}</span>
+		   <span class="alignright">Calories from Fat {cal_from_fat}</span>
+		   <hr>
+		   <div class="alignright"><strong>% Daily Value*</strong></div><div style="clear: both"></div>
+		   <span class="alignleft"><strong>Total Fat</strong> {total_fat}</span>
+		   <span class="alignright"><?php $total = '{total_fat}'/64; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="alignleft indent"><strong>Saturated Fat:</strong> {satfat}</span>
+		   <span class="alignright"><?php $total = '{satfat}'/20; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="alignleft"><strong>Cholesterol</strong> {cholesterol}</span>
+		   <span class="alignright"><?php $total = '{cholesterol}'/300; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="alignleft"><strong>Sodium</strong> {sodium}</span>
+		   <span class="alignright"><?php $total = '{sodium}'/2400; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="alignleft"><strong>Total Carbohydrate</strong> {total_carbohydrates}</span>
+		   <span class="alignright"><?php $total = '{total_carbohydrates}'/300; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="alignleft indent">Dietary Fiber 8.57g</span>
+		   <span class="alignright"><?php $total = 8.57/25; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="indent">Sugars {sugars}</span>
+		   <hr>
+		   <span class="alignleft"><strong>Protein</strong> {protein}</span>
+		   <span class="alignright"><?php $total = '{protein}'/50; echo "%" . percent($total);?></span>
+		   <hr>
+		   <span class="small">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</span>
+		</div>
+
+	</div>
+</div>
+
+
+
+   
+
+    	<script>
+    	$(function() {
+       	$('.print').click(function(){
+      
+      var printInfo = $('.page-content-wrap').html();
+      /*console.log(printInfo);*/
+      var myStyle = '<link rel="stylesheet" href="/assets/css/printMeal.css" />';
+      w=window.open(null, 'Print_Page', 'scrollbars=yes');   
+      w.document.write(myStyle + printInfo);
+      w.document.close();
+          
+   });
+       });
+       </script>
+
+    
+  
+
+
+  </section>
+</div><!-- /.row -->
+{/exp:channel:entries}
+
+{embed="includes/.footer"}
