@@ -400,18 +400,32 @@ but also won't be hovering on mobile...*/
 #savedWeeks .boxHead{
 	background-color: #8ba4aa;
 }
-#savedWeels .boxContent{
+/*#savedWeeks .boxContent{
 	height: 360px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	 direction:rtl;
-}
+}*/
 #createMyWeek .boxHead{
 	background-color: #7fc0d0;
 }
-
+#extraTips, #blog {
+	max-height: 300px;
+	padding: 0;
+}
+@media only screen and (max-width: 1200px) {
+	#extraTips {
+		padding: 0 20px;
+	}
+}
 #extraTips .boxHead{
 	background-color: #7f7f7f;
+}
+#extraTips .boxContent {
+	text-align: center;
+	max-width: 1200px;
+	margin-left: 0;
+	margin-right: 0;
 }
 #blog .boxHead{
 	background-color: #e45c58;
@@ -510,9 +524,9 @@ but also won't be hovering on mobile...*/
 	color: #8BA4AA;
 }
 .large{
-	width: 100%;
-	height: 300px;
-	padding: 0;
+	/*width: 100%;*/
+	/*height: 300px;*/
+	/*padding: 0;*/
 }
 .myWeek{
 	width: 150px;
@@ -568,7 +582,7 @@ but also won't be hovering on mobile...*/
     overflow: hidden;
     margin: auto;
 }
-.slideBox{
+.slideBox .arrow{
 	width: 50px;
 	background-color: #8BA4AA;
 	height: 50px;
@@ -578,6 +592,12 @@ but also won't be hovering on mobile...*/
 	cursor: pointer;
 	text-align: center;
 	padding-top: 8px;
+}
+#extraTips .fa-chevron-left {
+	float: left;
+}
+#extraTips .fa-chevron-right {
+	float: right;
 }
 .slideBox2{
 	width: 50px;
@@ -590,18 +610,19 @@ but also won't be hovering on mobile...*/
 	text-align: center;
 	padding-top: 8px;
 }
-#prevBox{
-	float: left;
+/*#prevBox{
+	/*float: left;
     margin-top: 64px;
-   /* margin-left: -33px;*/
+    margin-left: -33px;*!/
 }
-
 #nextBox{
-	float: right;
-	margin-top: 64px;
-
+	/*float: right;
+	margin-top: 64px;*!/
+}*/
+.memberBox .slideBox {
+	margin-top: 5%;
 }
-.slideBox:hover{
+.slideBox .arrow:hover{
 	background-color: #E45C58;
 	-webkit-box-shadow: -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
@@ -623,13 +644,27 @@ but also won't be hovering on mobile...*/
 .tipsSlide{
 	display: inline-block;
 }
+/*@media only screen and (min-width: 991px) {
+	.tipsSlide {
+		padding: 0 50px;
+	}
+}*/
+.tipsSlide.row {
+	margin: 0;
+}
+.tipsSlide img {
+	width: 100%;
+}
 .tipHolder{
-	width: 300px;
-    height: 200px;
-    margin: 10px;
-    float: left;
-    margin-right: 25px;
-    margin-left: 38px;
+	/*max-width: 300px;*/
+  max-height: 200px;
+  margin: 10px auto;
+  float: left;
+  /*margin-right: 25px;
+  margin-left: 38px;*/
+}
+.tipHolder a {
+	display: block;
 }
 .tipHolder p{
 	text-transform: capitalize;
@@ -770,6 +805,9 @@ input.log-input {
  .small_meal {
  	float: left;
  	padding-bottom: 15px;
+ }
+ #blog {
+ 	display: none;
  }
 }
 @media only screen and (max-width:767px) {

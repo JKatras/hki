@@ -126,20 +126,20 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 		<!-- Extra Tips -->
 		<div id="extraTips" class="memberBox large col-xs-12">
 			<div class="boxHead"><h2>Extra Tips</h2></div>
-			<div class="boxContent"> 
-			<div id="prevBox" class="slideBox"><i class="fa fa-chevron-left arrow"></i></div>
+			<div class="boxContent row"> 
+			<div id="prevBox" class="slideBox col-sm-1"><i class="fa fa-chevron-left arrow"></i></div>
 			{exp:channel:entries channel="extra_tips" limit="1" dynamic="off"}
 				{extra_tips_matrix}
-					{switch="<div class="tipsSlide">||"}
-						<div class="tipHolder">
-							<a href="{link}"><img src="{thumbnail}" alt="{tip_title}"/></a>
-							<p>{tip_title}</p>
-						</div>
+					{switch="<div class="tipsSlide col-sm-10">||"}
+							<div class="tipHolder col-xs-12 col-sm-4">
+								<a href="{link}"><img src="{thumbnail}" alt="{tip_title}"/></a>
+								<p>{tip_title}</p>
+							</div>
 					{switch="||</div>"}
 				{/extra_tips_matrix}
 				</div>
 			{/exp:channel:entries}
-			<div id="nextBox" class="slideBox"><i class="fa fa-chevron-right arrow"></i></div>
+			<div id="nextBox" class="slideBox col-sm-1"><i class="fa fa-chevron-right arrow"></i></div>
 			</div>
 		</div>
 		<!-- End Extra Tips -->
@@ -167,6 +167,16 @@ $id = ee()->session->userdata('member_id'); // Get Member ID
 </div> 
 
 <script type="text/javascript">
+//$(document).ready(function(){
+//	var blog = $('#blog');
+//	
+//	if ($(window).width() <= 991) {
+//		blog.addClass('no-display');
+//	}else {
+//		blog.removeClass('no-display');
+//	}
+//});
+
 var slideAmount = 0;
 var slideAmount2 = 0;
 
