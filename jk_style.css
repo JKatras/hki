@@ -410,18 +410,21 @@ but also won't be hovering on mobile...*/
 	background-color: #7fc0d0;
 }
 #extraTips, #blog {
-	max-height: 300px;
+	/*max-height: 300px;*/
 	padding: 0;
 }
+#extraTips .memberBox, #extraTips .memberBox {
+	height: auto;
+}
 @media only screen and (max-width: 1200px) {
-	#extraTips {
+	#extraTips, #blog {
 		padding: 0 20px;
 	}
 }
 #extraTips .boxHead{
 	background-color: #7f7f7f;
 }
-#extraTips .boxContent {
+#extraTips .boxContent, #blog .boxContent {
 	text-align: center;
 	max-width: 1200px;
 	margin-left: 0;
@@ -430,9 +433,9 @@ but also won't be hovering on mobile...*/
 #blog .boxHead{
 	background-color: #e45c58;
 }
-#blog .boxContent{
+/*#blog .boxContent{
 	height: 300px;
-}
+}*/
 .mealHold{
 	float: left;
 	width: 150px;
@@ -486,8 +489,9 @@ but also won't be hovering on mobile...*/
 }
 .favSlide{
 	/*width: 580px;*/
-	height: 300px;
+	/*height: 300px;*/
 	/*padding-left: 44px;*/
+	overflow: hidden;
 }
 #viewShoppingList{
 	height: 93px;
@@ -554,9 +558,56 @@ but also won't be hovering on mobile...*/
 	-moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 }
-.blogSlide{
+.arrow{
+	color: white;
+	font-size: 36px;
+}
+.tipsSlide, .blogSlide{
 	display: inline-block;
 }
+/*.tipsSlide.row, .blogSlide.row {
+	margin: 0;
+}*/
+.tipsSlide img, .blogSlide img {
+	width: 100%;
+}
+.tipHolder, .blogHolder{
+	/*max-width: 300px;*/
+  /*max-height: 200px;*/
+  margin: 10px auto;
+  float: left;
+  /*margin-right: 25px;
+  margin-left: 38px;*/
+}
+.tipHolder a, .blogHolder a {
+	display: block;
+}
+.tipHolder p, .blogHolder p{
+	/*text-transform: capitalize;*/
+	/*font-size: 16px;*/
+	text-align: center;	
+	margin-top: 10px;
+}
+.tipHolder p {
+	font-size: 16px;
+}
+.blogHolder.col-sm-2 {
+	width: 20%;
+}
+.blogHolder p {
+	font-size: 13px;
+}
+.blogSlide img {
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+/*.blogSlide{
+	display: inline-block;
+}
+
 .blogHolder{
 	float: 	left;
 	width: 	151px;
@@ -581,8 +632,8 @@ but also won't be hovering on mobile...*/
     -moz-border-radius: 150px;
     overflow: hidden;
     margin: auto;
-}
-.slideBox .arrow{
+}*/
+.slideBox .arrow, .slideBox2 .arrow{
 	width: 50px;
 	background-color: #8BA4AA;
 	height: 50px;
@@ -593,13 +644,13 @@ but also won't be hovering on mobile...*/
 	text-align: center;
 	padding-top: 8px;
 }
-#extraTips .fa-chevron-left {
+#extraTips .fa-chevron-left, #blog .fa-chevron-left {
 	float: left;
 }
-#extraTips .fa-chevron-right {
+#extraTips .fa-chevron-right, #blog .fa-chevron-right {
 	float: right;
 }
-.slideBox2{
+/*.slideBox2 .arrow{
 	width: 50px;
 	background-color: #8BA4AA;
 	height: 50px;
@@ -609,6 +660,12 @@ but also won't be hovering on mobile...*/
 	cursor: pointer;
 	text-align: center;
 	padding-top: 8px;
+}*/
+.prevBox {
+	padding-left: 0;
+}
+.nextBox {
+	padding-right: 0;
 }
 /*#prevBox{
 	/*float: left;
@@ -619,58 +676,24 @@ but also won't be hovering on mobile...*/
 	/*float: right;
 	margin-top: 64px;*!/
 }*/
-.memberBox .slideBox {
+.memberBox .slideBox, .memberBox .slideBox2 {
 	margin-top: 5%;
 }
-.slideBox .arrow:hover{
+.slideBox .arrow:hover, .slideBox2 .arrow:hover{
 	background-color: #E45C58;
 	-webkit-box-shadow: -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 
 }
-.slideBox2:hover{
+/*.slideBox2 .arrow:hover{
 	background-color: #E45C58;
 	-webkit-box-shadow: -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         -3px -1px 5px 0px rgba(50, 50, 50, 0.75);
 
-}
-.arrow{
-	color: white;
-	font-size: 36px;
-
-}
-.tipsSlide{
-	display: inline-block;
-}
-/*@media only screen and (min-width: 991px) {
-	.tipsSlide {
-		padding: 0 50px;
-	}
 }*/
-.tipsSlide.row {
-	margin: 0;
-}
-.tipsSlide img {
-	width: 100%;
-}
-.tipHolder{
-	/*max-width: 300px;*/
-  max-height: 200px;
-  margin: 10px auto;
-  float: left;
-  /*margin-right: 25px;
-  margin-left: 38px;*/
-}
-.tipHolder a {
-	display: block;
-}
-.tipHolder p{
-	text-transform: capitalize;
-	font-size: 16px;
-	text-align: center;	margin-top: 10px;
-}
+
 /*----------------------------------------*/
 
 /*--------------JK member styles--------------*/
@@ -684,6 +707,7 @@ but also won't be hovering on mobile...*/
 		max-width: 800px;
 		float: none;
 		margin: 0 auto;
+		padding: 0 60px;
 	}
 	@membersHome {
 		text-align: center;
@@ -696,7 +720,25 @@ but also won't be hovering on mobile...*/
     direction: rtl;
 	}
 }
-
+@media only screen and (max-width: 767px) {
+	#extraTips {
+		padding: 0 30px;
+		height: auto;
+		max-height: none;
+	}
+	.tipsSlide {
+		overflow: hidden;
+	}
+	.slideBox {
+		display: none;
+	}
+	.tipHolder {
+		margin: 10px auto 40px;
+	}
+	.tipHolder img {
+		max-width: 300px;
+	}
+}
 /*------------------------------------------*/
 
 /*-----------Login page---------------*/
@@ -809,6 +851,11 @@ input.log-input {
  #blog {
  	display: none;
  }
+}
+@media only screen and (max-width:991px) {
+	.circular-title p {
+		min-height: 75px;
+	}
 }
 @media only screen and (max-width:767px) {
 	.small_meal {
