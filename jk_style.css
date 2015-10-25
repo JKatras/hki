@@ -384,7 +384,10 @@ but also won't be hovering on mobile...*/
 #memberFav .boxHead{
 	background-color: #C7A900;
 }
-#memberFav .boxContent{
+#memberFav .boxContent, #featuredWeek .boxContent, #savedWeeks .boxContent {
+	padding-left: 4%;
+}
+#memberFav .boxContent, #featuredWeek .boxContent{
 	/*height: 360px;*/
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -396,7 +399,11 @@ but also won't be hovering on mobile...*/
 #featuredWeek .boxHead{
 	background-color: #072f42;
 }
-
+@media only screen and (min-width:767px) {
+	#savedWeeks, #createMyWeek {
+		max-height: 300px;
+	}
+}
 #savedWeeks .boxHead{
 	background-color: #8ba4aa;
 }
@@ -409,11 +416,15 @@ but also won't be hovering on mobile...*/
 #createMyWeek .boxHead{
 	background-color: #7fc0d0;
 }
+#createMyWeek .boxContent a {
+	display: block;
+	text-align: center;
+}
 #extraTips, #blog {
 	/*max-height: 300px;*/
 	padding: 0;
 }
-#extraTips .memberBox, #extraTips .memberBox {
+#extraTips, #blog{
 	height: auto;
 }
 @media only screen and (max-width: 1200px) {
@@ -424,12 +435,13 @@ but also won't be hovering on mobile...*/
 #extraTips .boxHead{
 	background-color: #7f7f7f;
 }
-#extraTips .boxContent, #blog .boxContent {
+#extraTips .row, #blog .row {
 	text-align: center;
 	max-width: 1200px;
 	margin-left: 0;
 	margin-right: 0;
 }
+
 #blog .boxHead{
 	background-color: #e45c58;
 }
@@ -519,7 +531,7 @@ but also won't be hovering on mobile...*/
 	font-size: 87px;
     /* margin: auto; */
     width: 75px;
-    margin-left: 232px;
+    /*margin-left: 232px;*/
     margin-top: 12px;
     color: #7FC0D0;
     cursor: pointer;
@@ -707,23 +719,25 @@ but also won't be hovering on mobile...*/
 		max-width: 800px;
 		float: none;
 		margin: 0 auto;
-		padding: 0 60px;
+		/*padding: 0 60px;*/
 	}
-	@membersHome {
+	#membersHome {
 		text-align: center;
+		padding: 0 30px;
 	}
 }
 @media only screen and (max-width: 767px) {
+	#membersHome {
+		padding: 0 30px;
+	}
 	#featuredWeek .boxContent {
 		overflow-y: scroll;
     overflow-x: hidden;
     direction: rtl;
 	}
-}
-@media only screen and (max-width: 767px) {
 	#extraTips {
-		padding: 0 30px;
-		height: auto;
+		/*padding: 0 30px;*/
+		/*height: auto;*/
 		max-height: none;
 	}
 	.tipsSlide {
