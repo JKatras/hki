@@ -364,7 +364,7 @@ but also won't be hovering on mobile...*/
 		display: block;
 		height: auto;
 	}
-	#login-social-nav {
+	#login-social-nav.home-social-nav, #page-top-row #login-social-nav {
 		display: none;
 	}
 	/*#login-social-nav ul li:not(.searchli) {
@@ -1053,16 +1053,17 @@ input.log-input {
 	text-align: center;
 }
 .recimage {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .wp-nutrition-label {
 	float: none;
 	margin: 0 auto;
 }
 @media only screen and (max-width: 845px) {
-	.nutrition {
+	.nutrition, .vid_box {
 		width: 100%;
 	}
+	
 }
 @media only screen and (max-width: 766px) {
 	.nutrition {
