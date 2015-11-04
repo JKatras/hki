@@ -581,6 +581,12 @@ but also won't be hovering on mobile...*/
 	font-size: 15px;
 	cursor: pointer;
 }
+#featuredWeek .mealControls i {
+	float: left;
+	margin-left: 11px;
+	margin-right: 11px;
+
+}
 .mealControls a{
 	color: white !important;
 }
@@ -838,6 +844,12 @@ but also won't be hovering on mobile...*/
 		max-width: 300px;
 	}
 }
+@media only screen and (max-width:445px) {
+	.mealHold {
+		float: none;
+		margin: 10px auto;
+	}
+}
 /*------------------------------------------*/
 
 /*-----------Login page---------------*/
@@ -923,6 +935,17 @@ input.log-input {
 	max-width: 1200px;
 	text-align: center;
 }
+@media only screen and(min-width:768px) {
+	.small_meal{
+		float: left;
+		width:20%;
+		text-align: center;
+	}
+	.small_meal p{
+		width: 75%;
+		margin: auto;
+	}
+}
 .small_meal {	
 	padding: 0 10px;
 	float: none;
@@ -943,6 +966,9 @@ input.log-input {
  	padding-bottom: 15px;
  }
  #blog {
+ 	display: none;
+ }
+ #createMyWeek {
  	display: none;
  }
 }
@@ -974,6 +1000,11 @@ input.log-input {
 		float: left;
 	}
 }
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	.small_meal img {
+		width: auto;
+	}
+}
 @media only screen and (max-width:550px) {
 	.small_meal {
 		padding-left: 20px;
@@ -985,6 +1016,7 @@ input.log-input {
 	.circular img {
 		width: 100px;
 		height: 100px;
+		left: 0;
 	}
 	.circular-title {
 		/*max-width: 80%;*/
