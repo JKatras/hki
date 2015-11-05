@@ -101,8 +101,11 @@ ul.home-overview-detail{
 		max-width: 100%;
 	}
 }
+#freeWeekButton {
+	cursor: pointer;
+}
 form#freeWeekForm{
-	padding-top: 215px;
+	padding-top: 215px;	
 }
 form#freeWeekForm input {
     margin-bottom: 39px;
@@ -288,7 +291,7 @@ but also won't be hovering on mobile...*/
 	#page-top-row-mem #login-social-nav ul li:not(.searchli) {
 		display: none;
 	}
-	#page-top-row-mem #login-social-nav ul li.searchli {
+	#page-top-row-mem .searchli {
 		margin-left: 80px;
 	}
 	#page-top-row-mem #login-social-nav {
@@ -915,12 +918,13 @@ input.log-input {
 	#page-top-row-mem #keywords {
 		width: 150px;
 	}
-	#login-social-nav ul li.searchli {
+	#page-top-row-mem .searchli {
 		margin-left: 50px;
 	}
 	#page-top-row-mem .searchSubmit {
 		font-size: 14px;
-		padding: 2px 3px;	
+		padding: 2px 3px;
+		top: 2px;	
 	}
 	#page-top-row-mem #header-menu-close-btn {
 		padding: 10px 10px 10px 5px;
